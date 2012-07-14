@@ -1,0 +1,267 @@
+{
+	"menu": {
+		"file": {
+			"root": "file",
+			"new": "new",
+			"import": "import",
+			"quickPack": "pack $1",
+			"quit": "quit"
+		},
+		"options": {
+			"root": "Edit",
+			"language": {
+				"root": "language",
+				"de_DE": "Deutsch (Deutschland)",
+				"en_US": "English (USA)"
+			},
+			"recent": "show most recently packed projects",
+			"doubleClick": "pack on double-click",
+			"warnings": "show warnings",
+			"tooltips": "show tooltips",
+			"tray": "minimize to tray",
+			"boot": "start on boot",
+			"defaultApp": "set as default application"
+		},
+		"library": {
+			"root": "library",
+			"copy": "copy Skripts",
+			"changePath": "change path of library",
+			"showPath": "show path of library",
+			"overwrite": "overwrite silently"
+		},
+		"validator": {
+			"root": "validator",
+			"enable": "validate JS",
+			"options": "jsHint options"
+		},
+		"packager": {
+			"root": "packager",
+			"closure": "use Closure Compiler",
+			"uglify": "Use  uglify.js",
+			"output": "show error output"
+		},
+		"help": {
+			"root": "help",
+			"updates": "check for new versions",
+			"changelog": "show changelog",
+			"about": "about"
+		}
+	},
+	"list": {
+		"lastPackedProjects": "most recently packed projects",
+		"newProject": "new project"
+	},
+	"details": {
+		"info": {
+			"packages": " $1 package(s)",
+			"files": "$1 file(s)"
+		},
+		"package": {
+			"fileName": "filename",
+			"addFile": "add file(s)",
+			"libraryImport": "import modules from library"
+		},
+		"button": {
+			"jsHint": "jsHint it",
+			"pack": "pack it!"
+		}
+	},
+	"tooltip": {
+		"list": {
+			"configure": "configure $1",
+			"delete": "delete $1",
+			"pack": "pack $1"
+		},
+		"details": {
+			"back": "back to overview",
+			"addPackage": "new package",
+			"deletePackage": "delete $1",
+			"deleteFile": "delete $1"
+		}
+	},
+	"editor": {
+		"yesText": "Ok",
+		"noText": "cancel"
+	},
+	"libLayer": {
+		"deps": "dependencies",
+		"optDeps": "optional dependencies",
+		"add": "add this one",
+		"quit": "quit",
+		"author": "author",
+		"contributors": "contributors"
+	},
+	"boxes": {
+		"header": {
+			"info": "information",
+			"warning": "warning",
+			"error": "error !",
+			"success": "success",
+			"waiting": "please wait.."
+		},
+		"buttons": {
+			"yestext": {
+				"normal": "yes",
+				"ok": "ok",
+				"edit": "edit"
+			},
+			"notext": {
+				"normal": "no",
+				"safety": "better not.",
+				"cancel": "cancel",
+				"moreInfo": "details"
+			}
+		},
+		"application": {
+			"error": {
+				"wrongArguments": "arguments passed incorrectly $1",
+				"libraryCopy": "The starter-kit could not be copied. <br/>$1 does not exist."
+			},
+			"waiting": {
+				"libraryCopy": "files are being copied from library."
+			},
+			"success": {
+				"libraryCopy": "starter-kit has been copied successfully."
+			}
+		},
+		"lib": {
+			"error": {
+				"copy": "file could not be copied: $1",
+				"readOnly": "the current folder is not writable",
+				"pathMissing": "no library path specified",
+				"modulesMissing": "could not find modules.json",
+				"modulesParse": "could not parse modules.json",
+				"packageMissing": "could not find package.json",
+				"packageParse": "could not parse package.json"
+			},
+			"warning": {
+				"keepExisting": "file $1 already exists. Won't copy over it."
+			}
+		},
+		"packager": {
+			"error": {
+				"devLoaderMissing": "Could not load the devLoader",
+				"smallLoaderMissing": "Could not load the smallLoader",
+				"packageWriteFail": "Could not write into the package $1",
+				"packerFail": "packing failed. Errors will be shown in the editor.",
+				"compressorMissing": "Compression Tool is missing (Closure and/or Uglify)",
+				"exeMissing": "executable file $1 is missing !? halting.",
+				"nativeProcessUnavailable": "impossible to start native processes. (how could you install the application ??)",
+				"noPackages": "There are no packages in $1",
+				"emptyPackages": "There are empty packages $1. please fill every package with at least one file, or delete empty packages"
+			},
+			"success": {
+				"packed": "$1 has been packed successfully."
+			},
+			"waiting": {
+				"packed": "please wait until packing the project completes."
+			},
+			"info": {
+				"validator": "$1 <br/> Could or Could not work<br/>pack it anyway ?",
+				"validatorResult": "$1 Erros in $2 files",
+				"use_kit": "use the starter-kit?"
+			}
+		},
+		"validator": {
+			"waiting": {
+				"validate": "please wait until validation completes."
+			}
+		},
+		"configfile": {
+			"error": {
+				"configwrite": "Config could not be written",
+				"configread": "Config could not be read",
+				"configparse": "Config could not be parsed",
+				"fileExists": "$1 is already in the package",
+				"packageListMissing": "There is no packageList in the Config. Have you edited in by hand?"
+			},
+			"info": {
+				"packageExists": "the package $1 already exists"
+			},
+			"success": {
+				"configwrite": "Config has been written"
+			}
+		},
+		"savefile": {
+			"error": {
+				"projectRead": "projects-file could not be read",
+				"projectParse": "projects-file could not be parsed",
+				"projectWrite": "projects-file could not be written"
+			},
+			"info": {
+				"projectExists": "The project already exists"
+			}
+		},
+		"update": {
+			"info": {
+				"install": "Do you want to install the update?",
+				"notOnMac": "This feature is currently unavailable for Mac",
+				"newUpdate": "version $1 available. <br/>Currently installed: $2<br/>Download new version?",
+				"noUpdate": "No update available"
+			},
+			"error": {
+				"save": "The new update could not be saved",
+				"ioError": "File not found. Please inform the author/admin of the packager"
+			},
+			"warning": {
+				"fail": "Could not determine if update is available. <br/>Server Error: $1 (StatusCode)"
+			}
+		},
+		"tray": {
+			"error": {
+				"projectChange": "Could not change to project $1"
+			}
+		},
+		"menu": {
+			"error": {
+				"configParse": "Config could not be parsed.",
+				"configWrite": "Config could not be written",
+				"configRead": "Config could not be read"
+			},
+			"success": {
+				"configWrite": "Config has been saved."
+			},
+			"info": {
+				"libPath": "Where is the script-library ?"
+			}
+		},
+		"editor": {
+			"error": {
+				"validJSON": "no valid JSON. Please take a closer look again."
+			}
+		},
+		"list": {
+			"error": {
+				"changeProject": "Could not change to project $1",
+				"dropParse": "Could not parse $1",
+				"dropRead": "Could not read $1"
+			},
+			"warning": {
+				"deleteProject": "Do you want to delete the project $1 ?"
+			},
+			"info": {
+				"addProject": {
+					"projectName": "Specify the name of the project:",
+					"projectPath": "Specify the path of the project:"
+				}
+			}
+		},
+		"details": {
+			"error": {
+				"unknownOption": "$1 is an unknown option",
+				"movePackage": "Could not move the packages",
+				"deletePackage": "Could not remove the package $1",
+				"moveFile": "File could not be moved",
+				"directoryMismatch": "files have be located in the same folder as the jspackcfg or lower.",
+				"fileMisMatch": "Files with the suffix $1 can not be packed"
+			},
+			"warning": {
+				"deletePackage": "Do you really want to remove the package $1 from the project ?",
+				"deleteFile": "Do you really want to remove the file $1 from the package ?"
+			},
+			"info": {
+				"addPackage": "Specify the name of the package"
+			}
+		}
+	}
+}
