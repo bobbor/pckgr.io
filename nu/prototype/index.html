@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<title>pckgr.io</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="css/normalize.min.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="js/vendor/modernizr-2.6.1.min.js"></script>
+	</head>
+	<body>
+		<div id="wrapper">
+			<header>
+				<h1>pckgr.io</h1>
+				<div id="version-information" class="small-text">
+					<span>5.0rev1</span>
+				</div>
+				<div id="window-action" class="btn-group">
+					<button class="icon small config">configure</button>
+					<button class="icon small update">update</button>
+					<button class="icon small minimize">minimize</button>
+					<button class="icon small maximize">maximize</button>
+					<button class="icon small close">close</button>
+				</div>
+			</header>
+			<div id="projects-wrapper" class="depth1 content-container">
+				<section id="projects">
+					<div class="meta">
+						<h1>Projects</h1>
+						<div id="projects-controls" class="btn-group">
+							<button class="icon small hide">hide</button>
+						</div>
+					</div>
+					<ol>
+						<li><strong>Project A</strong></li>
+						<li><strong>Project B</strong></li>
+						<li><strong>Project C</strong></li>
+						<li><strong>Project D</strong></li>
+						<li><strong>Project E</strong></li>
+						<li><strong>Project F</strong></li>
+						<li><strong>Project A</strong></li>
+						<li><strong>Project B</strong></li>
+						<li><strong>Project C</strong></li>
+						<li><strong>Project D</strong></li>
+						<li><strong>Project E</strong></li>
+						<li><strong>Project F</strong></li>
+					</ol>
+				</section>
+			</div>
+			<div id="details-wrapper" class="content-container depth2">
+				<section id="details">
+					<div class="meta">
+						<h1>Project A</h1>
+						<div id="details-controls">
+							<button class="icon small configure">configure</button>
+							<button class="icon small configure">delete</button>
+						</div>
+					</div>
+					<table id="contents">
+						<tr>
+							<th colspan="4"><button class="icon delete">delete</button><span>__basic-behaviour</span></th>
+						</tr>
+						<tr>
+							<td><button class="icon delete">delete</button></td>
+							<td><input type="checkbox" id="chckbx-lint-01" /><label for="chckbx-lint-01">nolint <small>[?]</small></td>
+							<td><input type="checkbox" id="chckbx-pack-01" /><label for="chckbx-pack-01">nopack <small>[?]</small></td>
+							<td>libs/jquery.min.js</td>
+						</tr>
+						<tr>
+							<td><button class="icon delete">delete</button></td>
+							<td><input type="checkbox" id="chckbx-lint-01" /><label for="chckbx-lint-01">nolint <small>[?]</small></td>
+							<td><input type="checkbox" id="chckbx-pack-01" /><label for="chckbx-pack-01">nopack <small>[?]</small></td>
+							<td>libs/underscore.js</td>
+						</tr>
+						<tr>
+							<th colspan="4"><button class="icon delete">delete</button><span>__base-modules</span></th>
+						</tr>
+						<tr>
+							<td><button class="icon delete">delete</button></td>
+							<td><input type="checkbox" id="chckbx-lint-01" /><label for="chckbx-lint-01">nolint <small>[?]</small></td>
+							<td><input type="checkbox" id="chckbx-pack-01" /><label for="chckbx-pack-01">nopack <small>[?]</small></td>
+							<td>libs/ui.a11y.ext.js</td>
+						</tr>
+						<tr>
+							<td><button class="icon delete">delete</button></td>
+							<td><input type="checkbox" id="chckbx-lint-01" /><label for="chckbx-lint-01">nolint <small>[?]</small></td>
+							<td><input type="checkbox" id="chckbx-pack-01" /><label for="chckbx-pack-01">nopack <small>[?]</small></td>
+							<td>fb-modules/ui.scroller.js</td>
+						</tr>
+					</table>
+				</section>
+			</div>
+			<div id="details-conf-wrapper" class="content-container depth3">
+				<section id="details-conf">
+					<div class="meta">
+						<h1>Paket-Einstellungen</h1>
+					</div>
+					<div class="settings-row">
+						<h2>Name</h2>
+						<label for="change-name">Namen ändern</label>
+						<input type="text" value="Project A"/><button class="btn">ok</button>
+					</div>
+					<div class="settings-row">
+						<h2>Loaders</h2>
+						<h3>dev-loader</h3>
+						<ol>
+							<li><span>__basic-behaviour</span></li>
+							<li class="add"><button class="btn">Hinzufügen</button></li>
+						</ol>
+						<h3>small-loader</h3>
+						<ol>
+							<li><span>__base-modules</span></li>
+							<li class="add"><button class="btn">Hinzufügen</button></li>
+						</ol>
+						<h3>no-loader (Application)</h3>
+						<ol>
+							<li><span>modules2</span></li>
+							<li class="add"><button class="btn">Hinzufügen</button></li>
+						</ol>
+						<h3>Remaining</h3>
+						<ol>
+							<li><span>__base-modules</span></li>
+						</ol>
+					</div>
+				</section>
+			</div>
+			<div id="conf-layer" class="overlay large">
+				<section id="layer-sidebar">
+					<ol>
+						<li><span>Mechanics</span></li>
+						<li><span>Validation</span></li>
+						<li><span>Library</span></li>
+						<li><span>GUI</span></li>
+					</ol>
+				</section>
+				<div id="layer-container">
+					<!-- <section id="mechanics-details">
+						<div class="row">
+							<div class="col50">
+								<h2>Engine</h2>
+								<label>Select how you want to build</label>
+								<select>
+									<option>Closure Compiler</option>
+									<option>uglify.js</option>
+								</select>
+							</div>
+							<div class="col50">
+								<h2>Paths</h2>
+								<div class="item">
+									<label>path to java-binary</label>
+									<input type="file" />
+								</div>
+								<div class="item">
+									<label>path to node-binary</label>
+									<input type="file" />
+								</div>
+							</div>
+						</div>
+					</section> -->
+					<!-- <section id="validation-details">
+						<div class="row">
+							<h2>Enable</h2>
+							<div class="col100">
+								<input type="checkbox" >
+								<label>Do you want the pckgr.io to lint/hint your JS?</label>
+							</div>
+						</div>
+						<div class="row">
+							<h2>Options</h2>
+							<div class="col25">
+								<div class="item item-small">
+									<input type="checkbox" />
+									<label>evil</label>
+								</div>
+							</div>
+							<div class="col25">
+								<div class="item item-small">
+									<input type="checkbox" />
+									<label>evil</label>
+								</div>
+							</div>
+							<div class="col25">
+								<div class="item item-small">
+									<input type="checkbox" />
+									<label>evil</label>
+								</div>
+							</div>
+							<div class="col25">
+								<div class="item item-small">
+									<input type="checkbox" />
+									<label>evil</label>
+								</div>
+							</div>
+							<div class="col25">
+								<div class="item item-small">
+									<input type="checkbox" />
+									<label>evil</label>
+								</div>
+							</div>
+							<div class="col25">
+								<div class="item item-small">
+									<input type="checkbox" />
+									<label>evil</label>
+								</div>
+							</div>
+							<div class="col25">
+								<div class="item item-small">
+									<input type="checkbox" />
+									<label>evil</label>
+								</div>
+							</div>
+						</div>
+					</section> -->
+
+					<!-- <section id="library-details">
+						<div class="row">
+							<div class="col50">
+								<h2>Enable</h2>
+								<input type="checkbox" >
+								<label>Do you want the pckgr.io to automatically import your scripts?</label>
+							</div>
+							<div class="col50">
+								<h2>Path</h2>
+								<div class="item">
+									<label>path to the library</label>
+									<input type="file" />
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<h2>Items</h2>
+							<div class="col25">
+								<span>Lightbox</span>
+							</div>
+							<div class="col25">
+								<span>Combobox</span>
+							</div>
+							<div class="col25">
+								<span>Checkbox</span>
+							</div>
+							<div class="col25">
+								<span>Tabtree</span>
+							</div>
+					</section> -->
+					<section id="gui-details">
+						<div class="row">
+							<div class="col50">
+								<h2>Color</h2>
+								<label>Set your own color in hex</label>
+								<input type="text" />
+							</div>
+							<div class="col50">
+								<h2>Language</h2>
+								<label>Select your language</label>
+								<select>
+									<option>English</option>
+									<option>Deutsch</option>
+								</select>
+							</div>
+						</div>
+						<div class="row">
+							<h2>UX improvements</h2>
+							<div class="col50">
+								<input type="checkbox" >
+								<label>Show Warnings</label>
+							</div>
+							<div class="col50">
+								<input type="checkbox" >
+								<label>Show Tooltips</label>
+							</div>
+					</section>
+				</div>
+			</div>
+		</div>
+		<script src="js/vendor/jquery-1.8.2.min.js"></script>
+		<script src="js/main.js"></script>
+	</body>
+</html>

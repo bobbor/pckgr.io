@@ -1,4 +1,4 @@
 .git
 .settings
 .project
-src/.sass-cache
+.sass-cache
