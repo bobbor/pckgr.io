@@ -1,0 +1,65 @@
+//$color: #464646;
+//$base: #FCFAD0;
+
+$base: #fbfbfb;
+$color: #f3f3f3;
+$highlight: #A90641;
+
+
+body,
+html,
+:root {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	-webkit-user-select: none;
+	background-color: $base;
+}
+
+#wrapper {
+	padding-left: 230px;
+	position: relative;
+	float: left;
+	height: 100%;
+	width: 100%;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+#project-details {
+	float: left;
+	position: relative;
+	width: 100%;
+	height: 100%;
+}
+
+.column {
+	header {
+		height: 40px;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		background-color: $color;
+		border-bottom: 1px solid darken($color, 10%);
+	}
+
+	section {
+		position: absolute;
+		top: 41px;
+		bottom: 41px;
+		overflow: auto;
+		width: 100%;
+	}
+
+	footer {
+		position: absolute;
+		height: 40px;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		background-color: $color;
+		border-top: 1px solid darken($color, 10%);
+	}
+}

@@ -1,0 +1,1 @@
+(function(){define("app",[],function(){var e=function(){};return e.prototype={},e})})(),function(){requirejs.config({baseUrl:"/js",paths:{},shim:{}}),require(["app"],function(e){window.pckgr=new e})}(),define("main",function(){});

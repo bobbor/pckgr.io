@@ -1,0 +1,21 @@
+{
+	"name": "pckgr.io",
+	"version": "4.0.0alpha",
+	"private": true,
+	"dependencies": {
+		"requirejs": "latest",
+		"connect": "2.7.0"
+	},
+	"devDependencies": {
+		"mocha": "latest",
+		"chai": "latest",
+		"grunt": "latest",
+		"grunt-exec": "latest"
+	},
+	"scripts": {
+		"start": "start node init.js",
+		"poststart": "compass watch src\\",
+		"debug": "compass compile src\\ && adl bin\\application.xml",
+		"grunt": "node_modules\\.bin\\grunt"
+	}
+}

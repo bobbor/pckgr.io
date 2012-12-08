@@ -2,3 +2,6 @@
 .settings
 .project
 .sass-cache
+cert.p12
+node_modules
+*.sublime*
