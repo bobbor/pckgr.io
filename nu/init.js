@@ -8,7 +8,7 @@
 	app = connect()
 		.use(connect['static']('src'))
 		.use('/test', connect['static']('test'))
-		.use('/js/lib/', connect['static']('node_modules/requirejs/'))
+		.use('/js/lib/', connect['static']('node_modules/'))
 		.use('/node_modules', connect['static']('node_modules'))
 	;
 

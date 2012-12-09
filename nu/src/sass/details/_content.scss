@@ -1,5 +1,84 @@
-#project-details section {
-	.alert {
-		-webkit-border-radius: 0;
+#content {
+	.packages {
+		list-style: none;
+		margin: 0;
+
+		li:first-child caption {
+			border-top: 0px;
+		}
+	}
+
+	caption {
+		text-align: left;
+		overflow: hidden;
+		padding: 0 20px;
+		background-color: $color;
+		border-bottom: 1px solid darken($color, 10%);
+		border-top: 1px solid darken($color, 10%);
+
+		h3 {
+			float: left;
+			margin: 0;
+			font-size: inherit;
+			line-height: inherit;
+		}
+		input {
+			font-size: 14px;
+			font-weight: normal;
+			padding: 0 5px;
+			height: 30px;
+			margin: 4px 0;
+		}
+
+		.actions {
+			margin: 7px 0;
+		}
+	}
+	.table {
+		margin-bottom: 0;
+	}
+	thead {
+		display: none;
+	}
+
+	td {
+		border-color: darken($color, 10%);
+		background-color: #d9d9d9;
+		overflow: hidden;
+		padding: 0;
+
+		& > div {
+			background-color: #fbfbfb;
+			padding: 10px 0 10px 50px;
+		}
+		.actions {
+			overflow: hidden;
+			margin-top: 10px;
+			display: none;
+
+			.btn {
+				float: left;
+			}
+			label {
+				float: left;
+				margin: 0 5px;
+			}
+
+			input {
+				margin: 0 2px 2px 0;
+			}
+		}
+		&.expanded {
+			padding: 10px 10px 10px 10px;
+			& > div {
+				padding: 10px 0 10px 40px;
+			}
+			.actions {
+				display: block;
+			}
+		}
+	}
+	tr:first-child td {
+		border: 0px;
 	}
 }

@@ -4,8 +4,11 @@
 		<meta charset="utf-8">
 		<title>pckgr.io</title>
 		<link rel="stylesheet" href="style/style.css" />
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-		<script type="text/javascript" src="js/lib/require.js"></script>
+		<link rel="stylesheet" href="style/jquery.jscrollpane.css" />
+		<script type="text/javascript" src="js/lib/jquery-browser/lib/jquery.js"></script>
+		<!--<script type="text/javascript" src="js/lib/AIRAliases.js"></script>
+		<script type="text/javascript" src="js/lib/AIRIntrospector.js"></script>-->
+		<script type="text/javascript" src="js/lib/requirejs/require.js"></script>
 	</head>
 	<body>
 		<div id="wrapper">
@@ -62,10 +65,10 @@
 							</ol>
 						</div>
 					</section>
-					<footer>
+					<footer class="toggle-actions">
 						<div>
 							<ul class="actions">
-								<li><button class="btn btn-small add"><i class="icon-plus"></i>&nbsp;&nbsp;&nbsp;New Project</button></li>
+								<li><button class="btn btn-small expandable"><i class="icon-plus"></i> New Project</button></li>
 							</ul>
 						</div>
 					</footer>
@@ -73,24 +76,318 @@
 			</section>
 			<section id="project-details" class="column">
 				<div>
-					<header>
+					<header class="toggle-actions">
 						<div>
 							<div class="edit-name pull-left">
-								<input type="text" disabled value="Bundeskanzlerin" />
-								<button class="btn"><i class="icon-pencil"></i> </button>
+								<input class="editableinput" type="text" value="Bundeskanzlerin" />
 							</div>
-							<div class="props pull-right">
-								<button type="button" class="btn btn-small" data-toggle="collapse" data-target="#demo"><i class="icon-plus"></i> Add a Package</button>
-								<button type="button" class="btn btn-small" data-toggle="collapse" data-target="#demo"><i class="icon-wrench"></i> </button>
+							<div class="actions pull-right btn-group">
+								<button type="button" class="btn btn-small expandable" data-toggle="collapse"><i class="icon-plus"></i> Add a Package</button>
+								<button type="button" class="btn btn-small expandable" data-toggle="collapse" data-target="#settings">
+									<i class="icon-cog"></i> Settings
+								</button>
 							</div>
 						</div>
 					</header>
-					<section>
-						<div id="demo" class="collapse"></div>
-						<!--<div class="alert alert-block alert-error">
-							<button type="button" class="close" data-dismiss="alert">×</button>
-							<strong>Warning!</strong> The Package "__basic-behaviour" is empty
-						</div>-->
+					<div id="settings" class="collapse">
+						<div>
+							<h4>Settings</h4>
+							<section>
+								<dl>
+									<dt>Pfad</dt>
+									<dd><a href="#">C:\Lorem\Ipsum\dolor\sit\amet.jspckcfg</a></dd>
+								</dl>
+							</section>
+						</div>
+					</div>
+					<!--<div class="alert alert-block alert-error">
+						<button type="button" class="close" data-dismiss="alert">×</button>
+						<strong>Warning!</strong> The Package "__basic-behaviour" is empty
+					</div>-->
+					<section id="content">
+						<div>
+							<ol class="packages">
+								<li>
+									<div>
+										<table class="table">
+											<caption class="toggle-actions">
+												<h3><input class="editableinput" type="text" value="__basic-behaviour" /></h3>
+												<div class="actions pull-right btn-group">
+													<button type="button" class="btn btn-small expandable"><i class="icon-plus"></i> Add a File</button>
+													<button type="button" class="btn btn-small expandable"><i class="icon-plus"></i> Add a Module</button>
+													<button type="button" class="btn btn-small btn-danger expandable"><i class="icon-trash"></i> Delete Package</button>
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<td>Filename</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div>
+										<table class="table">
+											<caption class="toggle-actions">
+												<h3><input class="editableinput" type="text" value="__basic-behaviour" /></h3>
+												<div class="actions pull-right btn-group">
+													<button type="button" class="btn btn-small expandable"><i class="icon-plus"></i> Add a File</button>
+													<button type="button" class="btn btn-small expandable"><i class="icon-plus"></i> Add a Module</button>
+													<button type="button" class="btn btn-small btn-danger expandable"><i class="icon-trash"></i> Delete Package</button>
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<td>Filename</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div>
+										<table class="table">
+											<caption class="toggle-actions">
+												<h3><input class="editableinput" type="text" value="__basic-behaviour" /></h3>
+												<div class="actions pull-right btn-group">
+													<button type="button" class="btn btn-small expandable"><i class="icon-plus"></i> Add a File</button>
+													<button type="button" class="btn btn-small expandable"><i class="icon-plus"></i> Add a Module</button>
+													<button type="button" class="btn btn-small btn-danger expandable"><i class="icon-trash"></i> Delete Package</button>
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<td>Filename</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div>
+															libs/jQuery.js
+															<div class="actions btn-group">
+																<button type="button" class="btn btn-danger btn-small">
+																	<i class="icon-white icon-trash"></i> delete this file
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not validate
+																</button>
+																<button type="button" data-toggle="button" class="btn btn-small">
+																	<i class="icon-check"></i> do not minify
+																</button>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</li>
+							</ol>
+						</div>
 					</section>
 					<footer>
 						<div>
@@ -106,6 +403,8 @@
 			</div>
 		</div>
 		<script type="text/javascript" src="js/main.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+		<script type="text/javascript" src="js/jquery.jscrollpane.min.js"></script>
 	</body>
 </html>

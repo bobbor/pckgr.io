@@ -4,6 +4,7 @@
 	"private": true,
 	"dependencies": {
 		"requirejs": "latest",
+		"jquery-browser": "latest",
 		"connect": "2.7.0"
 	},
 	"devDependencies": {
@@ -14,8 +15,8 @@
 	},
 	"scripts": {
 		"start": "start node init.js",
-		"poststart": "compass watch src\\",
-		"debug": "compass compile src\\ && adl bin\\application.xml",
+		"poststart": "compass watch src\\ -s expanded",
+		"debug": "compass compile src\\ && node_modules\\.bin\\grunt debug",
 		"grunt": "node_modules\\.bin\\grunt"
 	}
 }

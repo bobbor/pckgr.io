@@ -16,7 +16,9 @@ html,
 	-webkit-user-select: none;
 	background-color: $base;
 }
-
+section:focus, {
+	outline: none;
+}
 #wrapper {
 	padding-left: 230px;
 	position: relative;
@@ -32,10 +34,11 @@ html,
 	position: relative;
 	width: 100%;
 	height: 100%;
+	min-width: 375px;
 }
 
 .column {
-	header {
+	& > div > header {
 		height: 40px;
 		position: absolute;
 		top: 0;
@@ -45,7 +48,7 @@ html,
 		border-bottom: 1px solid darken($color, 10%);
 	}
 
-	section {
+	& > div > section {
 		position: absolute;
 		top: 41px;
 		bottom: 41px;
@@ -53,7 +56,7 @@ html,
 		width: 100%;
 	}
 
-	footer {
+	& > div > footer {
 		position: absolute;
 		height: 40px;
 		bottom: 0;
@@ -61,5 +64,66 @@ html,
 		right: 0;
 		background-color: $color;
 		border-top: 1px solid darken($color, 10%);
+	}
+}
+button.expandable {
+	width: 34px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	i {
+		width: 21px;
+	}
+	&:hover {
+		width: auto;
+
+		i {
+			width: 14px;
+		}
+	}
+}
+
+.btn {
+	box-shadow: none;
+	background: lighten($color, 5%);
+}
+.btn-primary {
+	background: #006dcc;
+}
+.btn-danger {
+	background: #da4f49;
+}
+
+.toggle-actions {
+	.actions button {
+		border-color: $color;
+		box-shadow: none;
+		background: $color;
+	}
+	&:hover .actions button {
+		border-color: #ccc; // bootstrap default
+		background: lighten($color, 5%);
+
+		&.btn-danger {
+			background: #da4f49;
+			i {
+				@extend .icon-white;
+			}
+		}
+	}
+}
+
+input.editableinput {
+	border-color: $color;
+	background-color: $color;
+	-webkit-box-shadow: 0 0 0 transparent;
+	width: auto;
+
+	&:hover {
+		border-color: #ccc; // bootstrap default
+	}
+	&:focus {
+		background-color: #fff;
+		-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075)
 	}
 }

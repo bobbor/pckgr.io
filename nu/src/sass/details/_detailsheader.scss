@@ -1,25 +1,19 @@
 #project-details header {
 	padding: 0 20px;
 	input {
-		font-size: 22px;
-		margin: 0;
+		font-size: 18px;
 		padding: 0 5px;
 		height: 30px;
 		margin: 4px 0;
 	}
-	input[disabled] {
-		cursor: default;
-		border-color: $color;
-		background-color: $color;
-		-webkit-box-shadow: 0 0 0 transparent;
-	}
+
 	.edit-name button {
 		display: none;
 	}
 	.edit-name:hover button {
 		display: inline-block;
 	}
-	.props {
+	.actions {
 		margin: 7px 0;
 	}
 }

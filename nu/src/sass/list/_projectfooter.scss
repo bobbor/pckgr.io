@@ -8,15 +8,4 @@
 		list-style: none;
 		width: 100%;
 	}
-	.add {
-		float: left;
-		width: 34px;
-		overflow: hidden;
-		white-space: nowrap;
-		text-align: left;
-		-webkit-transition: width 200ms ease-out 0s;
-	}
-	.add:hover {
-		width: 110px;
-	}
 }
