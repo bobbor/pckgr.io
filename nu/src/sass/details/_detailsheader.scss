@@ -1,12 +1,13 @@
 #project-details header {
 	padding: 0 20px;
+	z-index: 3;
 	input {
 		font-size: 18px;
 		padding: 0 5px;
 		height: 30px;
 		margin: 4px 0;
 	}
-
+	
 	.edit-name button {
 		display: none;
 	}

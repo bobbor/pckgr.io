@@ -5455,7 +5455,7 @@ ul.icons li .awesome-large:before {
 .awesome-share:before {
   content: "\f045";
 }
-.awesome-check:before {
+.awesome-check:before, .actions button[data-toggle="button"].active i:before {
   content: "\f046";
 }
 .awesome-move:before {
@@ -5927,7 +5927,7 @@ section:focus {
 }
 .column > div > section {
   position: absolute;
-  top: 41px;
+  top: 40px;
   bottom: 41px;
   overflow: auto;
   width: 100%;
@@ -5970,10 +5970,14 @@ button.expandable:hover i {
   border-color: #f3f3f3;
   box-shadow: none;
   background: #f3f3f3;
+  opacity: 0.15;
+  -webkit-transition: opacity 200ms ease-out 0s;
+  -webkit-transition-property: opacity, border-color,box-shadow,background;
 }
 .toggle-actions:hover .actions button {
   border-color: #ccc;
   background: white;
+  opacity: 1;
 }
 .toggle-actions:hover .actions button.btn-danger {
   background: #da4f49;
@@ -6008,6 +6012,7 @@ input.editableinput:focus {
 }
 #project-items {
   width: 100%;
+  top: 41px;
 }
 #project-items ol {
   list-style: none;
@@ -6084,6 +6089,7 @@ input.editableinput:focus {
 }
 #project-details header {
   padding: 0 20px;
+  z-index: 3;
 }
 #project-details header input {
   font-size: 18px;
@@ -6157,6 +6163,12 @@ input.editableinput:focus {
 #content caption .actions {
   margin: 7px 0;
 }
+#content caption.clone {
+  position: fixed;
+  top: 41px;
+  left: 230px;
+  right: 0;
+}
 #content .table {
   margin-bottom: 0;
 }
@@ -6168,14 +6180,21 @@ input.editableinput:focus {
   background-color: #d9d9d9;
   overflow: hidden;
   padding: 0;
+  cursor: pointer;
 }
 #content td > div {
   background-color: #fbfbfb;
   padding: 10px 0 10px 50px;
+  overflow: hidden;
+}
+#content td h5 {
+  margin: 0;
+  font-weight: normal;
+  line-height: 26px;
 }
 #content td .actions {
   overflow: hidden;
-  margin-top: 10px;
+  margin-right: 10px;
   display: none;
 }
 #content td .actions .btn {
@@ -6188,6 +6207,27 @@ input.editableinput:focus {
 #content td .actions input {
   margin: 0 2px 2px 0;
 }
+#content td.active1:not(.expanded) .actions, #content td.active2:not(.expanded) .actions {
+  display: inline-block;
+}
+#content td.active1:not(.expanded) .actions button, #content td.active2:not(.expanded) .actions button {
+  display: none;
+}
+#content td.active1:not(.expanded) .actions .active, #content td.active2:not(.expanded) .actions .active {
+  display: inline-block;
+}
+#content td.active1:not(.expanded):not(.active2) .active, #content td.active2:not(.expanded):not(.active1) .active {
+  border-radius: 4px;
+  margin-left: 0;
+}
+#content td.active1.active2:not(.expanded) .active {
+  border-radius: 4px 0 0 4px;
+  margin-left: 0;
+}
+#content td.active1.active2:not(.expanded) .active + .active {
+  margin-left: -1px;
+  border-radius: 0 4px 4px 0;
+}
 #content td.expanded {
   padding: 10px 10px 10px 10px;
 }
@@ -6195,7 +6235,7 @@ input.editableinput:focus {
   padding: 10px 0 10px 40px;
 }
 #content td.expanded .actions {
-  display: block;
+  display: inline-block;
 }
 #content tr:first-child td {
   border: 0px;

@@ -2,7 +2,7 @@
 <application xmlns="http://ns.adobe.com/air/application/2.6">
 	<id>de.packager</id>
 	<filename>Packager</filename>
-	<name>Packager</name>
+	<name>Packager_dev</name>
 	<versionNumber>3.0</versionNumber> <!-- for development -->
 	<description>
 		A Program to pack multiple JS-Files in to one.

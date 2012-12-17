@@ -864,7 +864,7 @@
 			.find('.active')
 			.removeClass('active')
 
-		this.$element.toggleClass('active')
+		this.$element.toggleClass('active').trigger('buttontoggled');
 	}
 
 

@@ -33,6 +33,13 @@
 		.actions {
 			margin: 7px 0;
 		}
+
+		&.clone {
+			position: fixed;
+			top: 41px;
+			left: 230px;
+			right: 0;
+		}
 	}
 	.table {
 		margin-bottom: 0;
@@ -46,14 +53,21 @@
 		background-color: #d9d9d9;
 		overflow: hidden;
 		padding: 0;
+		cursor: pointer;
 
 		& > div {
 			background-color: #fbfbfb;
 			padding: 10px 0 10px 50px;
+			overflow: hidden;
+		}
+		h5 {
+			margin: 0;
+			font-weight: normal;
+			line-height: 26px;
 		}
 		.actions {
 			overflow: hidden;
-			margin-top: 10px;
+			margin-right: 10px;
 			display: none;
 
 			.btn {
@@ -68,13 +82,41 @@
 				margin: 0 2px 2px 0;
 			}
 		}
+
+		&.active1:not(.expanded) .actions,
+		&.active2:not(.expanded) .actions {
+			display: inline-block;
+			button {
+				display: none;
+			}
+			.active {
+				display: inline-block;
+			}
+		}
+
+		&.active1:not(.expanded):not(.active2) .active,
+		&.active2:not(.expanded):not(.active1) .active {
+			border-radius: 4px;
+			margin-left: 0;
+		}
+
+		&.active1.active2:not(.expanded) .active {
+			border-radius: 4px 0 0 4px;
+			margin-left: 0;
+
+			+ .active {
+				margin-left: -1px;
+				border-radius: 0 4px 4px 0;
+			}
+		}
+
 		&.expanded {
 			padding: 10px 10px 10px 10px;
 			& > div {
 				padding: 10px 0 10px 40px;
 			}
 			.actions {
-				display: block;
+				display: inline-block;
 			}
 		}
 	}
