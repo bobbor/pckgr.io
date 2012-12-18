@@ -23,7 +23,9 @@
 			constructor: Scroller,
 			update: function() {
 				this._resetTimer();
-				this.$el.jScrollPane();
+				this.$el.jScrollPane({
+					mouseWheelSpeed: 15
+				});
 			},
 			_resetTimer: function() {
 				var bar = $('.jspVerticalBar', this.el);

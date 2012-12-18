@@ -23,7 +23,7 @@
 		<height>500</height>
 		<x>200</x>
 		<y>200</y>
-		<minSize>810 400</minSize>
+		<minSize>300 400</minSize>
 	</initialWindow>
 	<programMenuFolder>Packager</programMenuFolder>
 	<!-- <installFolder></installFolder> -->

@@ -5,6 +5,10 @@
 	width: 229px;
 	margin-left: -230px;
 	border-right: 1px solid darken($color, 10%);
+
+	@media (max-width: 605px) {
+		margin-left: -1px;
+	}
 }
 
 #filter-form {

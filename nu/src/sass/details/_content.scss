@@ -32,13 +32,22 @@
 
 		.actions {
 			margin: 7px 0;
+
+			@media (max-width: 605px) {
+				position: absolute;
+				right: 5px;
+			}
 		}
 
 		&.clone {
 			position: fixed;
-			top: 41px;
+			top: 40px;
 			left: 230px;
 			right: 0;
+
+			@media (max-width: 605px) {
+				left: 0;
+			}
 		}
 	}
 	.table {
