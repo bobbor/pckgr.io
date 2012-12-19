@@ -7237,8 +7237,10 @@ input.editableinput:focus {
     max-width: 73%;
   }
 }
-#project-details header .edit-name {
-  width: 100%;
+@media (max-width: 605px) {
+  #project-details header .edit-name {
+    width: 100%;
+  }
 }
 #project-details header .edit-name button {
   display: none;

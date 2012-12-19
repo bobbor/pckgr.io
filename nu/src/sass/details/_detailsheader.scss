@@ -12,8 +12,10 @@
 			max-width: 73%;
 		}
 	}
-	.edit-name {
-		width: 100%;
+	@media (max-width: 605px) {
+		.edit-name {
+			width: 100%;
+		}
 	}
 	.edit-name button {
 		display: none;

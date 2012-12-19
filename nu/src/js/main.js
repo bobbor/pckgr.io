@@ -2,8 +2,21 @@
 	requirejs.config({
 		baseUrl: '/js',
 		paths: {},
-		shim: {}
+		shim: {
+			'lib/underscore-min': {
+				exports: '_'
+			},
+			'lib/backbone-min': {
+				deps: ['lib/underscore-min'],
+				exports: 'Backbone'
+			},
+			'app': {
+				deps: ['lib/underscore-min', 'lib/backbone-min']
+			}
+		}
 	});
+
+
 	(function() {
 		function Scroller(el) {
 			var that = this;
@@ -58,10 +71,10 @@
 	}());
 
 
-	require(['app'], function(App) {
+	require(['app', 'lib/gui'], function(App) {
 		window.pckgr = new App();
+		
 		$(function() {
-
 			$('#content, #project-items').scroller();
 			
 			$('#content').on('click', 'td', function(e) {

@@ -1,0 +1,13 @@
+{
+	"nolint": [],
+	"nopack": [],
+	"includeSmallLoader": [],
+	"packageList": {
+		"gui": [
+			"bootstrap",
+			"jquery.mousewheel",
+			"jquery.jscrollpane.min"
+		]
+	},
+	"name": "pckgr"
+}
