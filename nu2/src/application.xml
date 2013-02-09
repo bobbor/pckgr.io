@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<application xmlns="http://ns.adobe.com/air/application/2.6">
+	<id>de.packager</id>
+	<filename>Packager</filename>
+	<name>Packager</name>
+	<versionNumber>4.0</versionNumber> <!-- for development -->
+	<description>
+		A Program to pack multiple JS-Files in to one.
+		(inspired by js.packager by AF)
+	</description>
+	<copyright>Philipp Paul, 2010-2011</copyright>
+	<supportedProfiles>extendedDesktop</supportedProfiles>
+	<initialWindow>
+		<content>index.html</content>
+		<title>packager</title>
+		<systemChrome>standard</systemChrome>
+		<transparent>false</transparent>
+		<visible>true</visible>
+		<minimizable>true</minimizable>
+		<maximizable>true</maximizable>
+		<resizable>true</resizable>
+		<width>810</width>
+		<height>500</height>
+		<x>200</x>
+		<y>200</y>
+		<minSize>810 400</minSize>
+	</initialWindow>
+	<programMenuFolder>Packager</programMenuFolder>
+	<!-- <installFolder></installFolder> -->
+	<icon>
+		<image16x16>icons/icon-16.png</image16x16>
+		<image32x32>icons/icon-32.png</image32x32>
+		<image48x48>icons/icon-48.png</image48x48>
+		<image128x128>icons/icon-128.png</image128x128>
+		<image512x512>icons/icon-512.png</image512x512>
+	</icon>
+	<allowBrowserInvocation>true</allowBrowserInvocation>
+	<fileTypes>
+		<fileType>
+			<name>Packager.ConfigFile</name>
+			<extension>jspackcfg</extension>
+			<description>Packager Config File</description>
+			<contentType>text/jspackcfg</contentType>
+			<icon>
+				<image16x16>icons/cfg-16.png</image16x16>
+				<image32x32>icons/cfg-32.png</image32x32>
+				<image48x48>icons/cfg-48.png</image48x48>
+				<image128x128>icons/cfg-128.png</image128x128>
+				<image512x512>icons/cfg-512.png</image512x512>
+			</icon>
+		</fileType>
+		<fileType>
+			<name>Packager.ConfigFile</name>
+			<extension>jspackconfig</extension>
+			<description>Packager Config File</description>
+			<contentType>text/jspackconfig</contentType>
+			<icon>
+				<image16x16>icons/cfg-16.png</image16x16>
+				<image32x32>icons/cfg-32.png</image32x32>
+				<image48x48>icons/cfg-48.png</image48x48>
+				<image128x128>icons/cfg-128.png</image128x128>
+				<image512x512>icons/cfg-512.png</image512x512>
+			</icon>
+		</fileType>
+	</fileTypes>
+</application>
