@@ -9,6 +9,10 @@ html,
 	-webkit-user-select: none;
 	background-color: $base;
 }
+
+body,input, button, select, textarea {
+	font-family: "Droid Sans", sans-serif;
+}
 section:focus, {
 	outline: none;
 }

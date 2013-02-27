@@ -47,7 +47,7 @@ button.expandable {
 		border-color: $color;
 		box-shadow: none;
 		background: $color;
-		opacity: 0.15;
+		opacity: 0.25;
 		-webkit-transition: opacity 200ms ease-out 0s;
 		-webkit-transition-property: opacity, border-color,box-shadow,background;
 	}
