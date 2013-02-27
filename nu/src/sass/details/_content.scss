@@ -33,7 +33,7 @@
 		.actions {
 			margin: 7px 0;
 
-			@media (max-width: 605px) {
+			@media (max-width: 723px) {
 				position: absolute;
 				right: 5px;
 			}
@@ -45,8 +45,11 @@
 			left: 230px;
 			right: 0;
 
-			@media (max-width: 605px) {
+			@media (max-width: 723px) {
 				left: 0;
+			}
+			@media (min-width:1050px) {
+				right: 430px;
 			}
 		}
 	}
@@ -60,76 +63,54 @@
 	td {
 		border-color: darken($color, 10%);
 		background-color: #d9d9d9;
-		overflow: hidden;
 		padding: 0;
 		cursor: pointer;
 
 		& > div {
 			background-color: #fbfbfb;
 			padding: 10px 0 10px 50px;
-			overflow: hidden;
+			height: 27px;
+			@media (max-width: 723px) {
+				padding: 10px 0 10px 25px;
+			}
 		}
 		h5 {
 			margin: 0;
 			font-weight: normal;
 			line-height: 26px;
 		}
-		.actions {
+		.title {
+			max-width: 170px;
 			overflow: hidden;
-			margin-right: 10px;
-			display: none;
-
-			.btn {
-				float: left;
-			}
-			label {
-				float: left;
-				margin: 0 5px;
-			}
-
-			input {
-				margin: 0 2px 2px 0;
-			}
-		}
-
-		&.active1:not(.expanded) .actions,
-		&.active2:not(.expanded) .actions {
+			text-overflow: ellipsis;
 			display: inline-block;
-			button {
-				display: none;
-			}
-			.active {
-				display: inline-block;
-			}
+			white-space: nowrap;
+			font-size: 13px;
+		}
+		.actions {
+			margin-right: 10px;
+		}
+		.dropdown-menu {
+			font-size: 11.9px;
 		}
 
-		&.active1:not(.expanded):not(.active2) .active,
-		&.active2:not(.expanded):not(.active1) .active {
-			border-radius: 4px;
-			margin-left: 0;
+		.dropdown-menu i {
+			margin-left: -18px;
 		}
-
-		&.active1.active2:not(.expanded) .active {
-			border-radius: 4px 0 0 4px;
-			margin-left: 0;
-
-			+ .active {
-				margin-left: -1px;
-				border-radius: 0 4px 4px 0;
-			}
-		}
-
-		&.expanded {
-			padding: 10px 10px 10px 10px;
-			& > div {
-				padding: 10px 0 10px 40px;
-			}
-			.actions {
-				display: inline-block;
-			}
+		.dropdown-menu .checked i {
+			@extend .fugue-check;
 		}
 	}
 	tr:first-child td {
 		border: 0px;
 	}
 }
+.alert {
+	-webkit-border-radius: 0;
+	position: absolute;
+	left:0;
+	right:0;
+	top:41px;
+	z-index: 1;
+}
+

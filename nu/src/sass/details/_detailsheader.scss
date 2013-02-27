@@ -8,26 +8,36 @@
 		height: 30px;
 		margin: 4px 0;
 
-		@media (max-width: 605px) {
+		@media (max-width: 723px) {
 			max-width: 73%;
+			margin-left: 10px;
 		}
 	}
-	@media (max-width: 605px) {
+	@media (max-width: 723px) {
 		.edit-name {
 			width: 100%;
 		}
 	}
 	.edit-name button {
 		display: none;
+		@media (max-width: 723px) {
+			display: inline-block;
+		}
 	}
-	.edit-name:hover button {
-		display: inline-block;
-	}
+
 	.actions {
 		margin: 7px 0;
-		@media (max-width: 605px) {
+		@media (max-width: 723px) {
 			position: absolute;
 			right: 5px;
+		}
+		@media (min-width:1050px) {
+			.settings {
+				display: none;
+			}
+			.add_package {
+				border-radius: 4px;
+			}
 		}
 	}
 }

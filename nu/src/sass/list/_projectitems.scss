@@ -1,7 +1,7 @@
 #project-items {
 	width: 100%;
 	top: 41px;
-	
+
 	ol {
 		list-style: none;
 		margin: 0;
@@ -19,7 +19,7 @@
 		}
 		&.active > div,
 		&.active:hover > div {
-			border-left-color: $highlight;
+			border-left-color: $lightblue;
 			background-color: $base;
 		}
 		&:hover > div {
@@ -33,7 +33,7 @@
 			display: none;
 			color: #aaa;
 			position: absolute;
-			right: 5px;
+			right: 15px;
 			top: 0;
 			bottom: 0;
 			margin: auto 0;
@@ -45,6 +45,7 @@
 		}
 		.delete i {
 			line-height: 1.7;
+			margin-top: 10px;
 		}
 	}
 
@@ -55,16 +56,6 @@
 		overflow: hidden;
 		text-overflow: ellipsis;
 		white-space: nowrap;
-	}
-
-	.label {
-		position: absolute;
-		top: 10px;
-		left: 5px;
-		max-width: 10px;
-		white-space: nowrap;
-		overflow: hidden;
-		text-overflow: ellipsis;
 	}
 	.change {
 		font-size: 12px;

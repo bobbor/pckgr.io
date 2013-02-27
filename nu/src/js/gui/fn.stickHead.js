@@ -18,11 +18,13 @@
 				container.on('jsp-scroll-y', function(e, pos, bottom, top) {
 					if(cap) {
 						idx = tables.index(active);
-						cap.css({
-							top: 40 < tables[idx+1].offsetTop-pos ?
-								40 : 0 > tables[idx+1].offsetTop-pos ?
-									0 : tables[idx+1].offsetTop-pos+2
-						});
+						if(tables[idx+1]) {
+							cap.css({
+								top: 40 < tables[idx+1].offsetTop-pos ?
+									40 : 0 > tables[idx+1].offsetTop-pos ?
+										0 : tables[idx+1].offsetTop-pos+2
+							});
+						}
 					}
 					prob = checkOffsets(pos, tables);
 					if(active == prob) { return; }
@@ -33,12 +35,15 @@
 						$('caption', active).clone().addClass('clone').appendTo(active);
 					}
 					idx = tables.index(active);
-					cap = $('caption.clone', active).show().css({
-						top: 40 < tables[idx+1].offsetTop-pos ?
-							40 : 0 > tables[idx+1].offsetTop-pos ?
-								0 : tables[idx+1].offsetTop-pos+2
-					});
-
+					if(tables[idx+1]) {
+						cap = $('caption.clone', active).show().css({
+							top: 40 < tables[idx+1].offsetTop-pos ?
+								40 : 0 > tables[idx+1].offsetTop-pos ?
+									0 : tables[idx+1].offsetTop-pos+2
+						});
+					} else {
+						cap = $('caption.clone', active).show();
+					}
 				});
 			});
 		};

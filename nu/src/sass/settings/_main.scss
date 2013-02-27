@@ -1,0 +1,75 @@
+@media (min-width:1050px) {
+	#wrapper {
+		padding-right: 430px;
+	}
+	#project-settings {
+		border-left: 1px solid darken($color, 10%);
+
+		header {
+			padding: 0 20px;
+			h5 {
+				color: #555555;
+				font-size: 18px;
+				font-weight: normal;
+			}
+		}
+		#settings {
+			height: auto !important;
+		}
+	}
+	#wrapper .column-mod {
+		margin-right: -430px;
+		width: 429px;
+		float: left;
+		position: relative;
+	}
+}
+@media (max-width: 1049px) {
+	.column-mod {
+		float: none;
+		height: auto;
+		&.in {
+			height: 100%;
+		}
+	}
+	#project-settings header,
+	#project-settings footer {
+		display: none;
+	}
+	#settings {
+		position: absolute;
+		top: 41px;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		background-color: $color;
+		//border-bottom: 0px solid darken($color, 10%);
+		//-webkit-box-shadow: 0 0 0 transparent;
+		-webkit-transition-duration: 0s;
+		&.in {
+			//border-bottom-width: 1px;
+			//-webkit-box-shadow: 0 2px 3px darken($color, 25%);
+		}
+	}
+}
+#settings {
+	.form-horizontal {
+		margin: 20px;
+		.control-group {
+			margin-bottom: 10px;
+		}
+	}
+	legend {
+		margin-bottom: 10px;
+	}
+	legend + .control-group {
+		margin-top: 10px;
+	}
+	label {
+		cursor: default;
+	}
+	.controls p {
+		padding-top: 5px;
+		margin: 0;
+	}
+}

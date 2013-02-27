@@ -1,12 +1,9 @@
 #project-listing {
-	float: left;
-	position: relative;
-	height: 100%;
 	width: 229px;
 	margin-left: -230px;
 	border-right: 1px solid darken($color, 10%);
 
-	@media (max-width: 605px) {
+	@media (max-width: 723px) {
 		margin-left: -1px;
 	}
 }
@@ -17,6 +14,10 @@
 
 	input {
 		width: 195px;
+
+		@media (max-width: 723px) {
+			width: 95%;
+		}
 	}
 }
 

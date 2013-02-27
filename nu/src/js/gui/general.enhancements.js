@@ -1,23 +1,29 @@
 (function(window, undefined) {
 	"use strict";
-	define(['gui/fn.scroller', 'lib/bootstrap', 'gui/fn.stickHead'], function() {
+	define([
+		'gui/fn.scroller',
+		'lib/bootstrap',
+		'gui/fn.stickHead',
+		'gui/fn.detailsSwitcher',
+		'gui/fn.collapse'
+	], function() {
 		$(function() {
 			$('#content')
 				.stickHead()
-				.on('click', 'td', function(e) {
+				.on('click', '.dropdown-menu a', function(e) {
 					var that = this;
-					if($(e.target).is('button, button *')) { return; }
-					$('#content td.expanded').filter(function() {
-						return !$(this).is(that);
-					}).removeClass('expanded');
-					$(this).toggleClass('expanded');
-					$('#content').scroller('update');
+					var container = $(that).closest('td');
+					var parent = $(that).parent();
+					parent.toggleClass('checked');
+					$('[data-rel="'+$(that).attr('data-control')+'"]', container)[parent.is('.checked') ? 'show' : 'hide']();
 				})
-				.on('buttontoggled', '.btn', function() {
-					var cn = 'active'+$(this).index();
-					$(this).closest('td')[$(this).is('.active') ? 'addClass' : 'removeClass'](cn);
-				})
-				.add('#project-items').scroller();
+				.add('#project-items, #settings').scroller();
+			$(document).detailsSwitcher();
+			$('[data-collapse]').collapseMe();
+
+			$('#settings').bind('shown', function() {
+				$('#settings').scroller('update');
+			});
 		});
 	});
 }(this, void 0));

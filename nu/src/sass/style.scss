@@ -4,7 +4,10 @@
  * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
 
 @import "bootstrap";
-@import "awesome";
+@import "items/icons";
+@import "defs/definitions";
+
 @import "layout";
 @import "list/main";
 @import "details/main";
+@import "settings/main";

@@ -20,6 +20,17 @@ define(['lib/jsp'], function() {
 			this.$el.jScrollPane({
 				mouseWheelSpeed: 15
 			});
+			this.api = this.$el.data('jsp');
+		},
+		destroyPane: function() {
+			var that = this;
+			if(this.api) {
+				this.api.destroy();
+				window.setTimeout(function() {
+					that.$el.removeAttr('style');
+				}, 100)
+			}
+			this.api = null;
 		},
 		_resetTimer: function() {
 			var bar = $('.jspVerticalBar', this.el);
