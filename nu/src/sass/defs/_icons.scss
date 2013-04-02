@@ -1,0 +1,18 @@
+[class^="fugue"],
+[class*=" fugue"] {
+	width: 16px;
+	height: 18px;
+	display: inline-block;
+	line-height: 18px;
+	background-repeat: no-repeat;
+	background-position: -1px 3px;
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
+.fugue-import { background-image: url(../icons/fugue/arrow-curve-000-double.png); background-position: 0 5px;}
+.fugue-back { background-image: url(../icons/fugue/arrow-curve-180.png); background-position: 0 3px;}
+.fugue-trash { background-image: url(../icons/fugue/cross.png); }
+.fugue-cog { background-image: url(../icons/fugue/gear.png); }
+.fugue-plus { background-image: url(../icons/fugue/plus.png); }
+.fugue-check { background-image: url(../icons/fugue/ui-check-box.png); }
+.fugue-check-empty { background-image: url(../icons/fugue/ui-check-box-uncheck.png); }

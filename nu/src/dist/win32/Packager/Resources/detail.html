@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>pckgr.io</title>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
+		<link rel="stylesheet" href="style/style.css" />
+		<link rel="stylesheet" href="style/jquery.jscrollpane.css" />
+	</head>
+	<body class="compass">
+		<div id="wrapper">
+			<section id="project-listing" class="column">
+				<div>
+					<header>
+					</header>
+					<section id="project-items">
+						<div>
+							<ol>
+								<li data-target="pckgr">
+									<div>
+										<h2>pckgr</h2>
+										<span class="change">
+											<time datetime="2012-11-12">2mo ago</time>
+										</span>
+										<a class="delete"><i class="fugue-trash"></i> </a>
+									</div>
+								</li>
+								<li data-target="compass">
+									<div>
+										<h2>Compass</h2>
+										<span class="change">
+											<time datetime="2012-11-12">2mo ago</time>
+										</span>
+										<span class="label label-info">watching</span>
+										<a class="delete"><i class="fugue-trash"></i> </a>
+									</div>
+								</li>
+								<li data-target="jekyll">
+									<div>
+										<h2>Jekyll</h2>
+										<span class="change">
+											<time datetime="2012-11-12">2mo ago</time>
+										</span>
+										<span class="label label-info">watching</span>
+										<a class="delete"><i class="fugue-trash"></i> </a>
+									</div>
+								</li>
+								<li data-target="grunt">
+									<div>
+										<h2>Grunt</h2>
+										<span class="change">
+											<time datetime="2012-11-12">2mo ago</time>
+										</span>
+										<a class="delete"><i class="fugue-trash"></i> </a>
+									</div>
+								</li>
+							</ol>
+						</div>
+					</section>
+					<footer class="toggle-actions">
+						<div>
+							<div class="actions btn-group">
+								<button class="btn btn-small expandable"><i class="fugue-plus"></i> New Feature</button>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</section>
+			<section id="project-details" class="column">
+				<div>
+					<header class="toggle-actions">
+						<div>
+							<div class="edit-name pull-left">
+								<button class="btn btn-small"><i class="fugue-back"></i></button>
+								<input class="editableinput" type="text" value="Bundeskanzlerin" />
+							</div>
+							<div class="pckgr target">
+								<div class="actions pull-right btn-group">
+									<button type="button" class="add_package btn btn-small expandable"><i class="fugue-plus"></i> Add a Package</button>
+								</div>
+							</div>
+						</div>
+					</header>
+					<!--<div class="alert alert-block alert-error">
+						<button type="button" class="close" data-dismiss="alert">×</button>
+						<strong>Warning!</strong> The Package "__basic-behaviour" is empty
+					</div>-->
+					<section class="pckgr content target">
+						<div>
+							<ol class="packages">
+								<li>
+									<div>
+										<table class="table">
+											<caption class="toggle-actions">
+												<h3><input class="editableinput" type="text" value="basic_behaviour"/></h3>
+												<div class="actions pull-right btn-group">
+													<button type="button" class="btn btn-small expandable"><i class="fugue-plus"></i> Add a File</button>
+													<button type="button" class="btn btn-small expandable"><i class="fugue-plus"></i> Add a Module</button>
+													<button type="button" class="btn btn-small btn-danger expandable"><i class="fugue-trash"></i> Delete Package</button>
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<td>Filename</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="modules/aperto.datepicker">modules/aperto.datepicker</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="fb-modules/aperto.autocomplete-patched">fb-modules/aperto.autocomplete-patched</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div>
+										<table class="table">
+											<caption class="toggle-actions">
+												<h3><input class="editableinput" type="text" value="basic_behaviour-2"/></h3>
+												<div class="actions pull-right btn-group">
+													<button type="button" class="btn btn-small expandable"><i class="fugue-plus"></i> Add a File</button>
+													<button type="button" class="btn btn-small expandable"><i class="fugue-plus"></i> Add a Module</button>
+													<button type="button" class="btn btn-small btn-danger expandable"><i class="fugue-trash"></i> Delete Package</button>
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<td>Filename</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</li>
+								<li>
+									<div>
+										<table class="table">
+											<caption class="toggle-actions">
+												<h3><input class="editableinput" type="text" value="basic_behaviour-3"/></h3>
+												<div class="actions pull-right btn-group">
+													<button type="button" class="btn btn-small expandable"><i class="fugue-plus"></i> Add a File</button>
+													<button type="button" class="btn btn-small expandable"><i class="fugue-plus"></i> Add a Module</button>
+													<button type="button" class="btn btn-small btn-danger expandable"><i class="fugue-trash"></i> Delete Package</button>
+												</div>
+											</caption>
+											<thead>
+												<tr>
+													<td>Filename</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																foo
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+												<tr>
+													<td>
+														<div class="toggle-actions">
+															<h5 class="name pull-left">
+																<span class="title" title="foo">foo</span>
+																<span class="label label-info" data-rel="validate" style="display: none">no validate</span>
+																<span class="label label-info" data-rel="minify" style="display: none">no minify</span>
+															</h5>
+															<div class="actions btn-group pull-right">
+																<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+																	<i class="fugue-cog"></i>
+																	Options
+																	<span class="caret"></span>
+																</button>
+																<ul class="dropdown-menu">
+																	<li class="checkbox-item"><a href="#" data-control="validate"><i class="fugue-check-empty"></i>do not validate</a></li>
+																	<li class="checkbox-item"><a href="#" data-control="minify"><i class="fugue-check-empty"></i>do not minify</a></li>
+																	<li class="divider"></li>
+																	<li><a href="#">delete</a></li>
+																</ul>
+															</div>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</li>
+							</ol>
+						</div>
+					</section>
+					<section class="compass console content target">
+<pre><code>/-------------------------------------------------------------------------------\
+|                                                                               |
+| Frontender Console                                                            |
+|                                                                               |
+| to log your output                                                            |
+|                                                                               |
+\-------------------------------------------------------------------------------/
+</code></pre>
+					</section>
+					<footer>
+						<div>
+							<div class="pckgr target">
+								<div class="btn-group pull-left">
+									<button class="btn">Validieren</button>
+								</div>
+								<div class="btn-group pull-right">
+									<button class="btn btn-primary">Packen</button>
+								</div>
+							</div>
+							<div class="compass target">
+								<div>
+									<div class="btn-group pull-right">
+										<button class="btn btn-success">Start Watching</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</section>
+		</div>
+		<script src="js/lib/require.js" data-main="js/main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,42 @@
+<ti:app xmlns:ti="http://ti.appcelerator.org">
+<id>com.bobbor.pckgr.io.src</id>
+<name>Packager</name>
+<version>0.0.1</version>
+<publisher>Philipp Paul</publisher>
+<url>http://pckgr.io</url>
+<icon>icon-128.png</icon>
+<copyright>2010-2013 Philipp Paul</copyright>
+	<window>
+		<id>main_window</id>
+		<title>pckgr.io</title>
+		<url>app://index.html</url>
+		<width>1100</width>
+		<height>550</height>
+		<max-width>3000</max-width>
+		<max-height>3000</max-height>
+		<min-width>820</min-width>
+		<min-height>400</min-height>
+		<fullscreen>false</fullscreen>
+		<resizable>true</resizable>
+		<chrome scrollbars="true">true</chrome>
+		<maximizable>true</maximizable>
+		<minimizable>true</minimizable>
+		<closeable>true</closeable>
+	</window>
+	<window>
+		<id>detail_window</id>
+		<url-regex>.*detail.*</url-regex>
+		<width>1100</width>
+		<height>550</height>
+		<max-width>3000</max-width>
+		<max-height>3000</max-height>
+		<min-width>820</min-width>
+		<min-height>400</min-height>
+		<fullscreen>false</fullscreen>
+		<resizable>true</resizable>
+		<chrome scrollbars="true">true</chrome>
+		<maximizable>true</maximizable>
+		<minimizable>true</minimizable>
+		<closeable>true</closeable>
+	</window>
+</ti:app>
