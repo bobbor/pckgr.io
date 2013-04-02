@@ -1,1 +1,0 @@
-(function(){define([],function(){var e=function(){};return e.prototype={},e})})();
