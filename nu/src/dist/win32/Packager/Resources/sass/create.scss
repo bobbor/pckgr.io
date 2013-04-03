@@ -1,0 +1,74 @@
+@import "defs/icons";
+@import "defs/definitions";
+
+.step {
+	margin: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	border: 1px solid darken($base, 20%);
+	background-color: darken($base, 10%);
+	border-radius: 4px;
+	padding: 20px;
+}
+.past,
+.future {
+	display: none;
+}
+#step_name input {
+	margin: 10px 0;
+	font-size: 18px;
+	padding: 10px 8px;
+	height: auto;
+}
+
+.pager {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: 0;
+
+	.display {
+		position: absolute;
+		left: 0;
+		top: 5px;
+		background-color: darken($lightblue, 30%);
+		background-image: linear-gradient(225deg, rgba(255,255,255,0.3), rgba(255,255,255,0.05));
+		-webkit-transition: -webkit-transform 250ms ease-out;
+		-webkit-transform: translate(0, 0);
+		z-index: 0;
+		border-radius: 85%;
+	}
+	ul {
+		margin: 0 auto 10px;
+		display: inline-block;
+		position: relative;
+	}
+	li {
+		background: #444;
+		width: 10px;
+		height: 10px;
+		text-indent: -9999em;
+		display: inline-block;
+		z-index: -1;
+		margin-right: 3px;
+
+		span {
+			z-index: 1;
+			padding: 0;
+			display: block;
+			top: 0;
+			position: relative;
+			left: 0;
+			border-radius: 50%;
+			width: 10px;
+			height: 10px;
+			background-color: transparent;
+			box-shadow: 0 0 0 5px white, 1px 0 0 1px white;
+			border: none;
+		}
+	}
+}

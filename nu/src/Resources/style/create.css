@@ -1,0 +1,224 @@
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_icons\.scss}line{font-family:\000032}}
+[class^="fugue"],
+[class*=" fugue"] {
+  width: 16px;
+  height: 18px;
+  display: inline-block;
+  line-height: 18px;
+  background-repeat: no-repeat;
+  background-position: -1px 3px;
+  margin-top: -1px;
+  margin-bottom: -1px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_icons\.scss}line{font-family:\0000312}}
+.fugue-import {
+  background-image: url(../icons/fugue/arrow-curve-000-left.png);
+  background-position: 0 5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_icons\.scss}line{font-family:\0000313}}
+.fugue-back {
+  background-image: url(../icons/fugue/arrow-180.png);
+  background-position: 0 3px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_icons\.scss}line{font-family:\0000314}}
+.fugue-next {
+  background-image: url(../icons/fugue/arrow.png);
+  background-position: 0 5px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_icons\.scss}line{font-family:\0000315}}
+.fugue-trash {
+  background-image: url(../icons/fugue/cross.png);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_icons\.scss}line{font-family:\0000316}}
+.fugue-cog {
+  background-image: url(../icons/fugue/gear.png);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_icons\.scss}line{font-family:\0000317}}
+.fugue-plus {
+  background-image: url(../icons/fugue/plus.png);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_icons\.scss}line{font-family:\0000318}}
+.fugue-check, .actions button[data-toggle="button"].active i {
+  background-image: url(../icons/fugue/ui-check-box.png);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_icons\.scss}line{font-family:\0000319}}
+.fugue-check-empty {
+  background-image: url(../icons/fugue/ui-check-box-uncheck.png);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_icons\.scss}line{font-family:\0000320}}
+.fugue-right {
+  margin-left: 3px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000316}}
+button.expandable {
+  width: 34px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 2px 8px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000323}}
+button.expandable i {
+  width: 21px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000326}}
+button.expandable:hover {
+  width: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000328}}
+button.expandable:hover i {
+  width: 16px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000334}}
+.btn {
+  box-shadow: none;
+  background: white;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000338}}
+.btn-primary {
+  background: #006dcc;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000341}}
+.btn-danger {
+  background: #da4f49;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000344}}
+.btn-success {
+  background: #5bb75b;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000349}}
+.toggle-actions .actions button {
+  border-color: #f3f3f3;
+  box-shadow: none;
+  background: #f3f3f3;
+  opacity: 0.25;
+  -webkit-transition: opacity 200ms ease-out 0s;
+  -webkit-transition-property: opacity, border-color,box-shadow,background;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000357}}
+.toggle-actions:hover .actions button {
+  border-color: #ccc;
+  background: white;
+  opacity: 1;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000362}}
+.toggle-actions:hover .actions button.btn-danger {
+  background: #da4f49;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000368}}
+input.editableinput {
+  border-color: #f3f3f3;
+  background-color: #f3f3f3;
+  -webkit-box-shadow: 0 0 0 transparent;
+  width: auto;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000374}}
+input.editableinput:hover {
+  border-color: #ccc;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000377}}
+input.editableinput:focus {
+  background-color: #fff;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/defs\/_definitions\.scss}line{font-family:\0000388}}
+:focus {
+  outline: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/create\.scss}line{font-family:\000034}}
+.step {
+  margin: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 1px solid #c8c8c8;
+  background-color: #e2e2e2;
+  border-radius: 4px;
+  padding: 20px;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/create\.scss}line{font-family:\0000317}}
+.past,
+.future {
+  display: none;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/create\.scss}line{font-family:\0000320}}
+#step_name input {
+  margin: 10px 0;
+  font-size: 18px;
+  padding: 10px 8px;
+  height: auto;
+}
+
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/create\.scss}line{font-family:\0000327}}
+.pager {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: 0;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/create\.scss}line{font-family:\0000334}}
+.pager .display {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  background-color: #2b7786;
+  background-image: linear-gradient(225deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.05));
+  -webkit-transition: -webkit-transform 250ms ease-out;
+  -webkit-transform: translate(0, 0);
+  z-index: 0;
+  border-radius: 85%;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/create\.scss}line{font-family:\0000345}}
+.pager ul {
+  margin: 0 auto 10px;
+  display: inline-block;
+  position: relative;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/create\.scss}line{font-family:\0000350}}
+.pager li {
+  background: #444;
+  width: 10px;
+  height: 10px;
+  text-indent: -9999em;
+  display: inline-block;
+  z-index: -1;
+  margin-right: 3px;
+}
+@media -sass-debug-info{filename{font-family:file\:\/\/C\:\/Users\/Philipp\/workspace\/pckgr\.io\/nu\/src\/Resources\/sass\/create\.scss}line{font-family:\0000359}}
+.pager li span {
+  z-index: 1;
+  padding: 0;
+  display: block;
+  top: 0;
+  position: relative;
+  left: 0;
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
+  box-shadow: 0 0 0 5px white, 1px 0 0 1px white;
+  border: none;
+}
