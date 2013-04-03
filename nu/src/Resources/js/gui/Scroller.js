@@ -1,5 +1,6 @@
-define(['lib/jsp'], function() {
-	function Scroller(el) {
+$script.ready(['jquery','scrollpane', '_'], function() {
+	var Frontender = window.Frontender;
+	Frontender.Scroller = function(el) {
 		var that = this;
 		this.el = el;
 		this.$el = $(this.el);
@@ -12,9 +13,9 @@ define(['lib/jsp'], function() {
 			that.update();
 		});
 		this.update();
-	}
-	Scroller.prototype = {
-		constructor: Scroller,
+	};
+	_.extend(Frontender.Scroller.prototype, {
+		constructor: Frontender.Scroller,
 		update: function() {
 			this._resetTimer();
 			this.$el.jScrollPane({
@@ -42,7 +43,5 @@ define(['lib/jsp'], function() {
 				bar.addClass('hidden');
 			}, 1000);
 		}
-	};
-
-	return Scroller;
-})
+	});
+});

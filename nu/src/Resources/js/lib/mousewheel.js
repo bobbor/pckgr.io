@@ -11,7 +11,7 @@
  */
 
 (function($) {
-
+$script.ready(['jquery'], function() {
 var types = ['DOMMouseScroll', 'mousewheel'];
 
 if ($.event.fixHooks) {
@@ -80,5 +80,5 @@ function handler(event) {
     
     return ($.event.dispatch || $.event.handle).apply(this, args);
 }
-
+})
 })(jQuery);
