@@ -9,6 +9,15 @@
 						var details = Ti.UI.createWindow("app://detail.html?foo");
 						details.open();
 						details.setTitle('some project');
+
+						var notification = Ti.Notification.createNotification({
+							'title' : 'Notification from App',
+							'message' : 'Click here for updates!',
+							'timeout' : 10,
+							'icon' : 'app://icons/app/icon-32.png'
+						});
+
+						notification.show();
 						return false;
 					});
 				});
