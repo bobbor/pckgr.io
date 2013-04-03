@@ -13,7 +13,7 @@
 			read: function(type) {
 				var content;
 				if(!this.fileHandle.exists()) {
-					content = '';
+					return false;
 				} else {
 					this.fileStream.open(Ti.Filesystem.MODE_READ);
 					content = new String(this.fileStream.read(this.fileHandle.size()));

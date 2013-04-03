@@ -9,6 +9,10 @@
 				this.file = new f.File(this.filename);
 			},
 			sync: function(type, model, args) {
+				var ret = this.file.read('JSON');
+				if(!ret) {
+					return;
+				}
 				args.success(this.file.read('JSON'))
 			}
 		});

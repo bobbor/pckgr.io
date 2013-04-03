@@ -5,6 +5,7 @@
 		<title>pckgr.io</title>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
 		<link rel="stylesheet" href="style/index.css" />
+		<link rel="stylesheet" href="style/create.css" />
 		<link rel="stylesheet" href="style/jquery.jscrollpane.css" />
 		<script>
 			window.Frontender || (window.Frontender = {});
@@ -19,15 +20,102 @@
 					<header>
 						<h4>Create Project</h4>
 					</header>
-					<section>
+					<section id="#content">
+						<div>
+							<div class="step active" id="step_name">
+								<h4>Enter Name</h4>
+								<form class="form">
+									<input type="text" class="input-block-level" placeholder="the nyan project" />
+									<span class="help-block">here you define the name of the project to be created<br/>can be changed later</span>
+								</form>
+							</div>
+							<div class="step future">
+								<h4>Choose HTML</h4>
+								<form class="form">
+									<label class="radio">
+										<input type="radio" name="html" value="none" />No HTML
+									</label>
+									<label class="radio">
+										<input type="radio" name="html" value="h5bp" />HTML5 Boilerplate
+									</label>
+									<label class="radio">
+										<input type="radio" name="html" value="bower" />Jekyll
+									</label>
+									<br/>
+									<label class="checkbox">
+										<input type="checkbox" name="html_kit" value="h5bp" />Include kit
+									</label>
+								</form>
+							</div>
+							<div class="step future">
+								<h4>Choose CSS</h4>
+								<form class="form">
+									<label class="radio">
+										<input type="radio" name="css" value="none" />No CSS
+									</label>
+									<label class="radio">
+										<input type="radio" name="css" value="none" />Compass
+									</label>
+									<label class="radio">
+										<input type="radio" name="css" value="h5bp" />Less
+									</label>
+									<br/>
+									<label class="checkbox">
+										<input type="checkbox" name="css_kit" value="h5bp" />Include kit
+									</label>
+								</form>
+							</div>
+							<div class="step future">
+								<h4>Choose JS</h4>
+								<form class="form">
+									<label class="radio">
+										<input type="radio" name="js" value="none" />No JS
+									</label>
+									<label class="radio">
+										<input type="radio" name="js" value="h5bp" />pckgr
+									</label>
+									<br/>
+									<label class="checkbox">
+										<input type="checkbox" name="js_kit" value="h5bp" />Include kit
+									</label>
+								</form>
+							</div>
+							<div class="step future">
+								<h4>This is it</h4>
+								<table class="table">
+									<tr>
+										<td>Name: </td><td><strong>Foo</strong></td><td></td>
+									</tr>
+									<tr>
+										<td>HTML: </td><td><strong>Jekyll</strong></td><td>(with kit)</td>
+									</tr>
+									<tr>
+										<td>CSS: </td><td><strong>Compass</strong></td><td></td>
+									</tr>
+									<tr>
+										<td>JS: </td><td><strong>pckgr</strong></td><td>(with kit)</td>
+									</tr>
+								</table>
+							</div>
+						</div>
+						<div class="pager">
+							<ul>
+								<li class="display"></li>
+								<li><span>step1</span></li>
+								<li><span>step2</span></li>
+								<li><span>step3</span></li>
+								<li><span>step4</span></li>
+								<li><span>step5</span></li>
+							</ul>
+						</div>
 					</section>
 					<footer>
 						<div>
 							<div class="actions btn-group">
-								<button class="btn btn-small"><i class="fugue-back"></i> Back</button>
+								<button class="btn btn-small back"><i class="fugue-back"></i> Back</button>
 							</div>
 							<div class="actions btn-group pull-right">
-								<button class="btn btn-small btn-success">Next <i class="fugue-next fugue-right"></i></button>
+								<button class="btn btn-small btn-success next">Next <i class="fugue-next fugue-right"></i></button>
 							</div>
 						</div>
 					</footer>
@@ -35,5 +123,6 @@
 			</section>
 		</div>
 		<script src="js/main.js"></script>
+		<script src="js/create/create.js"></script>
 	</body>
 </html>
