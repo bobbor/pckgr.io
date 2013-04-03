@@ -3,7 +3,7 @@
 	<id>de.packager</id>
 	<filename>Packager</filename>
 	<name>Packager</name>
-	<versionNumber>3.0</versionNumber> <!-- for development -->
+	<versionNumber>3.1</versionNumber> <!-- for development -->
 	<description>
 		A Program to pack multiple JS-Files in to one.
 		(inspired by js.packager by AF)
