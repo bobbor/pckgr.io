@@ -1,11 +1,15 @@
-(function() {
-	$script
-		.ready(['jquery', 'Scroller'], function() {
+(function(window, undefined) {
+	"use strict";
+	var f = window.Frontender;
+	f.$script
+		.ready(['jquery', 'ScrollerClass'], function() {
+			var $ = f.jQuery;
+			var Scroller = f.Scroller;
 			$.fn.scroller = function(method, opts) {
 				return this.each(function() {
 					var inst = $.data(this, 'scroller');
 					if(!inst) {
-						inst = new Frontender.Scroller(this, method);
+						inst = Scroller(this);
 						$.data(this, 'scroller', inst);
 					}
 					if('string' === typeof method) {
@@ -18,4 +22,4 @@
 				});
 			};
 		});
-}())
+}(this, void 0))

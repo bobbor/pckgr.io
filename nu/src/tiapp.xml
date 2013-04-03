@@ -40,4 +40,28 @@
 		<minimizable>true</minimizable>
 		<closeable>true</closeable>
 	</window>
+	<window>
+		<id>create_window</id>
+		<url>app://create.html</url>
+		<width>500</width>
+		<height>400</height>
+		<fullscreen>false</fullscreen>
+		<resizable>false</resizable>
+		<chrome scrollbars="false">true</chrome>
+		<maximizable>false</maximizable>
+		<minimizable>false</minimizable>
+		<closeable>true</closeable>
+	</window>
+	<window>
+		<id>feature_window</id>
+		<url>app://feature.html</url>
+		<width>500</width>
+		<height>400</height>
+		<fullscreen>false</fullscreen>
+		<resizable>false</resizable>
+		<chrome scrollbars="false">true</chrome>
+		<maximizable>false</maximizable>
+		<minimizable>false</minimizable>
+		<closeable>true</closeable>
+	</window>
 </ti:app>

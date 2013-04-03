@@ -85,3 +85,6 @@ input.editableinput {
 		@extend .fugue-check;
 	}
 }
+:focus {
+	outline: none;
+}

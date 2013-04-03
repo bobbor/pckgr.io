@@ -1,48 +1,55 @@
-define(['lib/jsp'], function() {
-	function Scroller(el) {
-		var that = this;
-		this.el = el;
-		this.$el = $(this.el);
+(function(window, undefined) {
+	"use strict";
+	var f = window.Frontender;
+	f.$script.ready(['jquery','scrollpane'], function() {
+		var $ = f.jQuery;
 
-		this.$el.on('scroll', function() {
-			that._resetTimer();
-		});
+		f.Scroller = function(el) {
+			var $el = $(el);
+			var api, timer;
 
-		$(window).on('resize', function() {
-			that.update();
-		});
-		this.update();
-	}
-	Scroller.prototype = {
-		constructor: Scroller,
-		update: function() {
-			this._resetTimer();
-			this.$el.jScrollPane({
-				mouseWheelSpeed: 15
+			function update() {
+				_resetTimer();
+				$el.jScrollPane({
+					mouseWheelSpeed: 15
+				});
+				api = $el.data('jsp');
+			}
+
+			function destroyPane() {
+				if(api) {
+					api.destroy();
+					window.setTimeout(function() {
+						$el.removeAttr('style');
+					}, 100)
+				}
+				api = null;
+			}
+
+			function _resetTimer() {
+				var bar = $('.jspVerticalBar', el);
+				if(timer) {
+					window.clearTimeout(timer);
+				}
+				bar.removeClass('hidden');
+				timer = window.setTimeout(function() {
+					bar.addClass('hidden');
+				}, 1000);
+			}
+
+			$el.on('scroll', function() {
+				_resetTimer();
 			});
-			this.api = this.$el.data('jsp');
-		},
-		destroyPane: function() {
-			var that = this;
-			if(this.api) {
-				this.api.destroy();
-				window.setTimeout(function() {
-					that.$el.removeAttr('style');
-				}, 100)
-			}
-			this.api = null;
-		},
-		_resetTimer: function() {
-			var bar = $('.jspVerticalBar', this.el);
-			if(this.timer) {
-				window.clearTimeout(this.timer);
-			}
-			bar.removeClass('hidden');
-			this.timer = window.setTimeout(function() {
-				bar.addClass('hidden');
-			}, 1000);
-		}
-	};
+			$(window).on('resize', function() {
+				update();
+			});
+			update();
 
-	return Scroller;
-})
+			return {
+				update: update,
+				destroyPane: destroyPane
+			}
+
+		};
+	});
+}(this, void 0))

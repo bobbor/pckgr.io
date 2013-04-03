@@ -1,6 +1,7 @@
 (function(window, undefined) {
 	"use strict";
-	define(function() {
+	window.Frontender.$script.ready(['jquery'], function() {
+		var $ = window.Frontender.jQuery;
 		$.fn.stickHead = function() {
 			return this.each(function(i, elm) {
 				var container = $(elm);

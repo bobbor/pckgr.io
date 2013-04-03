@@ -1,27 +1,20 @@
 (function(window, undefined) {
 	"use strict";
+	var f = window.Frontender;
+	var $s = f.$script;
 
-	define(['lib/jquery', 'gui/index.enhancements'], function($) {
-		return {
-			init: function() {
-				$(function() {
-					$('.project').on('click', 'button.detail', function() {
-						var details = Ti.UI.createWindow("app://detail.html?foo");
-						details.open();
-						details.setTitle('some project');
+	$s('js/models/ProjectItem.js', 'ProjectItem');
+	$s('js/collections/ProjectList.js', 'ProjectList');
+	$s('js/views/ProjectItemView.js', 'ProjectItemView');
 
-						var notification = Ti.Notification.createNotification({
-							'title' : 'Notification from App',
-							'message' : 'Click here for updates!',
-							'timeout' : 10,
-							'icon' : 'app://icons/app/icon-32.png'
-						});
+	$s('js/views/FrontFooterView.js', 'FrontFooterView');
+	$s('js/views/FrontContentView.js', 'FrontContentView');
+	$s('js/views/FrontPageView.js', 'FrontPageView');
 
-						notification.show();
-						return false;
-					});
-				});
-			}
-		};
+	$s.ready(['jquery', 'FrontPageView'], function() {
+		var $ = f.jQuery;
+		$(function() {
+			f.frontPageViewInstance = new f.FrontPageView();
+		});
 	});
 }(this, void 0));

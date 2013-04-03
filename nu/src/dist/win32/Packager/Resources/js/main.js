@@ -1,39 +1,26 @@
 (function() {
-	requirejs.config({
-		baseUrl: 'js',
-		shim: {
-			'lib/jsp': ['lib/mousewheel'],
-			'lib/mousewheel': ['lib/jquery'],
-			'gui/fn.scroller': ['lib/jquery'],
-			'gui/fn.collapse': ['lib/jquery'],
-			'gui/fn.stickHead': ['lib/jquery'],
-			'gui/fn.detailsSwitcher': ['lib/jquery'],
-			'lib/bootstrap': ['lib/jquery'],
-			'lib/jquery': {
-				exports: '$'
-			},
-			'lib/underscore': {
-				exports: '_'
-			},
-			'lib/backbone': {
-				deps: ['lib/underscore', 'lib/jquery'],
-				exports: 'Backbone'
-			},
-			'detail': {
-				deps: ['lib/underscore', 'lib/backbone']
-			}
-		}
+	var $s = window.Frontender.$script;
+	var f = window.Frontender;
+	$s('js/lib/jquery.js', 'jquery', function() {
+		f.jQuery = window.jQuery.noConflict(true);
+		f.$ = f.jQuery;
 	});
+	$s('js/lib/underscore.js', '_', function() {
+		f._ = window._.noConflict(true);
+	});
+	$s('js/lib/mousewheel.js', 'mousewheel'); // depends on jquery
+	$s('js/lib/jsp.js', 'scrollpane'); // depends on jquery and mousewheel
+	$s('js/gui/Scroller.js', 'ScrollerClass'); // depends on jquery and scrollpane
 
-	require(['lib/jquery'], function($) {
-		if($(document.body).is('#home')) {
-			require(['index'], function(index) {
-				index.init();
-			});
-			return;
-		}
-		require(['detail'], function(App) {
-			window.pckgr = new App();
-		});
-	});
+	$s('js/gui/fn.stickHead.js', 'sticky'); // depends on jquery
+	$s('js/lib/bootstrap.js', 'bootstrap'); //depends on jquery
+
+	$s('js/gui/fn.scroller.js', 'scroller'); // depends on jquery and ScrollerClass
+
+	$s('js/lib/backbone.js', 'backbone', function() {
+		f.Backbone = window.Backbone.noConflict(true);
+	}); // depends on jquery and underscore
+	$s('js/data/fsBridge.js', 'File');
+
+	$s(['js/lib/jquery.js', 'js/lib/underscore.js', 'js/lib/backbone.js'], 'oo');
 }());
