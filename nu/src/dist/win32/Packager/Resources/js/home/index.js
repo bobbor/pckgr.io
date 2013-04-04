@@ -11,7 +11,7 @@
 	$s('js/home/views/ContentView.js', 'ContentView');
 	$s('js/home/views/MainView.js', 'MainView');
 
-	$s.ready(['jquery', 'MainView'], function() {
+	$s.ready(['jquery', 'MainView', 'Settings'], function() {
 		var $ = f.jQuery;
 		$(function() {
 			new f.MainView();

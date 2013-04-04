@@ -1,0 +1,52 @@
+[
+	{
+		"title":	"Enter Name",
+		"markup":	"<form class=\"form\"><input type=\"text\" class=\"input-block-level\" placeholder=\"the nyan project\" /><span class=\"help-block\">here you define the name of the project to be created<br/>can be changed later</span></form>"
+	}, {
+		"title":	"Choose HTML",
+		"options": [
+			{
+				"name": "No HTML",
+				"val": "none"
+			}, {
+				"name": "Jekyll",
+				"val": "jekyll"
+			}
+		],
+		"mayUseKit": false,
+		"assoc_name": "html"
+	}, {
+		"title":	"Choose CSS",
+		"options": [
+			{
+				"name": "No CSS",
+				"val": "none"
+			}, {
+				"name": "Compass",
+				"val": "compass"
+			}, {
+				"name": "LESS",
+				"val": "less"
+			}
+		],
+		"mayUseKit": false,
+		"assoc_name": "css"
+	}, {
+		"title":	"Choose JS",
+		"options": [
+			{
+				"name": "No JS",
+				"val": "none"
+			}, {
+				"name": "Packager",
+				"val": "pckgr"
+			}
+		],
+		"assoc_name": "js",
+		"mayUseKit": "true"
+	}, {
+		"id": "result",
+		"title": "Your Project",
+		"configuration": {}
+	}
+]

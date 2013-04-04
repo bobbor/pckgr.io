@@ -4,14 +4,18 @@
 
 	$s.ready(['_', 'backbone'], function() {
 
-		Frontender.File = function(filename) {
-			this.fileHandle = Ti.Filesystem.getFile(Ti.Filesystem.getApplicationDataDirectory(), filename);
-			this.fileStream = Ti.Filesystem.getFileStream(Ti.Filesystem.getApplicationDataDirectory(), filename);
+		Frontender.File = function(filename, dir) {
+			dir = dir || 'ApplicationDataDirectory';
+			var fn = 'get'+dir;
+			this.fileHandle = Ti.Filesystem.getFile(Ti.Filesystem[fn](), filename);
+			this.fileStream = Ti.Filesystem.getFileStream(Ti.Filesystem[fn](), filename);
 		}
 
 		Frontender._.extend(Frontender.File.prototype, Frontender.Backbone.Events, {
 			read: function(type) {
 				var content;
+				console.log('reading')
+				console.log(this.fileHandle.nativePath())
 				if(!this.fileHandle.exists()) {
 					return false;
 				} else {
@@ -25,6 +29,8 @@
 				return content;
 			},
 			write: function(content) {
+				console.log('writing')
+				console.log(this.fileHandle.nativePath())
 				if(!this.fileHandle.exists()) {
 					this.fileHandle.touch();
 				}

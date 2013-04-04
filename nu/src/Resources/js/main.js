@@ -21,6 +21,5 @@
 		f.Backbone = window.Backbone.noConflict(true);
 	}); // depends on jquery and underscore
 	$s('js/data/fsBridge.js', 'File');
-
-	$s(['js/lib/jquery.js', 'js/lib/underscore.js', 'js/lib/backbone.js'], 'oo');
+	$s('js/data/Settings.js', 'Settings');
 }());
