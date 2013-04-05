@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>pckgr.io</title>
+		<title>Create New Project - Frontender</title>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
 		<link rel="stylesheet" href="style/index.css" />
 		<link rel="stylesheet" href="style/create.css" />
@@ -45,13 +45,13 @@
 			<form class="form">
 				<% for(var i = 0, len = options.length; i < len; i++) { %>
 				<label class="radio">
-					<input type="radio" name="<%= assoc_name %>" value="<%= options[i].val %>" /><%= options[i].name %>
+					<input type="radio" name="<%= assoc_name %>" value="<%= options[i] %>" /><%= options[i] %>
 				</label>
 				<% } %>
 				<% if(mayUseKit) { %>
 				<br/>
 				<label class="checkbox">
-					<input type="checkbox" name="kit" value="true" />Include kit
+					<input type="checkbox" name="withKit" value="true" />Include kit
 				</label>
 				<% } %>
 			</form>
@@ -60,7 +60,7 @@
 			<table class="table">
 				<% for(var i = 0, len = configuration.length; i < len; i++) { %>
 					<tr>
-						<td><%= configuration[i].key %></td><td><strong>configuration[i].value</strong></td><td><%- configuration[i].withKit ? "(with kit)" : "" %></td>
+						<td><%= configuration[i].name %></td><td><strong><%= configuration[i].value %></strong></td><td><%- configuration[i].withKit ? "(with kit)" : "" %></td>
 					</tr>
 				<% } %>
 			</table>

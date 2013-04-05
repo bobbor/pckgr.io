@@ -7,9 +7,13 @@
 			template: f._.template(f.$('#step-markup-template').html()),
 			choicetemplate: f._.template(f.$('#step-choice-template').html()),
 			resulttemplate: f._.template(f.$('#step-result-template').html()),
+			events: {
+				'change input': 'update',
+				'input input': 'update'
+			},
 			initialize: function(opts) {
 				this.state = opts.state;
-				this.listenTo(this.model, 'change', this.update);
+				this.listenTo(this.model, 'change:configuration', this.render);
 			},
 			render: function() {
 				var data = this.model.toJSON();
@@ -24,8 +28,16 @@
 				this.$el.addClass(this.state);
 				return this;
 			},
-			update: function() {
-
+			update: function(e) {
+				var elm = f.$(e.target);
+				if(elm.is('[type="checkbox"]')) {
+					this.model.set('withKit', elm.prop('checked'));
+					return;
+				}
+				this.model.set({
+					name: elm.prop('name'),
+					value: elm.val()
+				});
 			}
 		});
 	});

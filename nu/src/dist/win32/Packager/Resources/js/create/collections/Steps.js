@@ -8,7 +8,6 @@
 				this.file = new f.File(this.filename, 'ApplicationDirectory');
 			},
 			sync: function(type, model, args) {
-				console.log('sync', arguments)
 				var ret = this.file.read('JSON');
 				if(!ret) {
 					return;

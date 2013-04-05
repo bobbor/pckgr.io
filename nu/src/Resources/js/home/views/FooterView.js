@@ -18,9 +18,16 @@
 				};
 			},
 			createNewProject: function() {
-				var create = Ti.UI.createWindow("app://create.html");
+				var that = this;
+				this.create = Ti.UI.createWindow("app://create.html");
+				function transferData() {
+					var scoped_window = that.create.getDOMWindow();
+					var sf = scoped_window.Frontender || (scoped_window.Frontender = {});
+					scoped_window.Frontender.projects = f.Projects;
+					that.create.removeEventListener(Ti.PAGE_INITIALIZED, transferData)
+				}
+				this.create.addEventListener(Ti.PAGE_INITIALIZED, transferData)
 				create.open();
-				create.setTitle('Create a new Project');
 			},
 			importProject: function() {
 
