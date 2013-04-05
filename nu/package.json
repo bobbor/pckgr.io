@@ -2,7 +2,10 @@
 	"name": "pckgr.io",
 	"version": "4.0.0alpha",
 	"private": true,
+	"dependencies": {
+		"connect": "2.7.0"
+	},
 	"scripts": {
-		"start": "start node init.js"
+		"start": "start C:\\bins\\node\\node init.js"
 	}
 }
