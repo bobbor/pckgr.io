@@ -2,21 +2,7 @@
 	"name": "pckgr.io",
 	"version": "4.0.0alpha",
 	"private": true,
-	"dependencies": {
-		"requirejs": "latest",
-		"jquery-browser": "latest",
-		"connect": "2.7.0"
-	},
-	"devDependencies": {
-		"mocha": "latest",
-		"chai": "latest",
-		"grunt": "latest",
-		"grunt-exec": "latest"
-	},
 	"scripts": {
-		"start": "start node init.js",
-		"poststart": "compass watch src\\ -s expanded",
-		"debug": "compass compile src\\ && node_modules\\.bin\\grunt debug",
-		"grunt": "node_modules\\.bin\\grunt"
+		"start": "start node init.js"
 	}
 }
