@@ -1,4 +1,16 @@
 {
-	"name": "Packager",
-	"main": "Resources/index.html"
+	"name": "pckgr.io",
+	"main": "init.html",
+	"description": "pckgr.io with new interface",
+	"version": "4.0.0alpha",
+	"keywords": [ "demo", "node-webkit" ],
+	"window": {
+		"icon": "icon-128.png",
+		"toolbar": true,
+		"width": 400,
+		"height": 400,
+		"position": "center",
+		"resizable": false,
+		"frame": true
+	}
 }
