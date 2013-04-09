@@ -6,6 +6,8 @@
 		"connect": "2.7.0"
 	},
 	"scripts": {
-		"start": "start C:\\bins\\node\\node init.js"
+		"start_win": "start C:\\bins\\node\\node init.js",
+		"start_lin": "bash start.sh",
+		"start_mac": "bash start.sh"
 	}
 }

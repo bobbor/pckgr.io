@@ -1,16 +1,16 @@
 {
 	"name": "pckgr.io",
-	"main": "init.html",
+	"main": "prog/index.html",
 	"description": "pckgr.io with new interface",
 	"version": "4.0.0alpha",
 	"keywords": [ "demo", "node-webkit" ],
 	"window": {
 		"icon": "icon-128.png",
 		"toolbar": true,
-		"width": 400,
-		"height": 400,
+		"width": 800,
+		"height": 500,
 		"position": "center",
-		"resizable": false,
+		"resizable": true,
 		"frame": true
 	}
 }

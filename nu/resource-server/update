@@ -1,6 +1,54 @@
-[{
-	"version": {"major": 4, "minor": 0, "bf": 0, "build": 1 },
-	"files": [
-		"pckgr.io-update-bundle-4.0.0.1.zip"
-	]
-}]
+{
+	"to_add": {
+		"icons": {
+			"app": {
+				".": [
+					"icon-128.png",
+					"icon-16.png",
+					"icon-32.png",
+					"icon-48.png",
+					"icon-512.png"
+				]
+			},
+			"cfg": {
+				".":[
+					"cfg-128.png",
+					"cfg-16.png",
+					"cfg-32.png",
+					"cfg-48.png",
+					"cfg-512.png"
+				]
+			},
+			"fugue": {
+				".": [
+					"arrow-180.png",
+					"arrow-curve-000-left.png",
+					"arrow-curve-180.png",
+					"arrow.png",
+					"cross.png",
+					"gear.png",
+					"plus.png",
+					"ui-check-box-uncheck.png",
+					"ui-check-box.png"
+				]
+			}
+		},
+		"js": {
+			".": [
+				"main.js"
+			]
+		},
+		"style": {
+			".": [
+				"create.css",
+				"index.css",
+				"jquery.jscrollpane.css",
+				"style.css"
+			]
+		},
+		".": [
+			"index.html"
+		]
+	},
+	"to_remove": {}
+}
