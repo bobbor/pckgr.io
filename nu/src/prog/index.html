@@ -1,9 +1,53 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 	<head>
-		<link rel="stylesheet" href="css/init/init.css" />
+		<meta charset="utf-8">
+		<title>pckgr.io</title>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
+		<link rel="stylesheet" href="css/index.css" />
 	</head>
-	<body>
-		
+	<body id="home">
+		<div id="wrapper">
+			<section class="column">
+				<div>
+					<header>
+						<h4>Frontender</h4>
+					</header>
+					<section>
+						<div class="wrapper-outer">
+							<div id="content">
+								<section class="project">
+									<div class="box toggle-actions">
+										<div class="main">
+											<h1>Projekt A</h1>
+											<div class="preview">
+													<span class="label label-info">Compass</span>
+											</div>
+										</div>
+										<div class="actions btn-group">
+											<button class="btn btn-small detail expandable"><i class="fugue-cog"></i> Details</button>
+											<button class="btn btn-small btn-danger expandable"><i class="fugue-trash"></i> Delete</button>
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+					</section>
+					<footer class="toggle-actions">
+						<div>
+							<div class="actions btn-group">
+								<button class="btn btn-small expandable" data-action="create"><i class="fugue-plus"></i> New Project</button>
+								<button class="btn btn-small expandable" data-action="import"><i class="fugue-import"></i> Import Project</button>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</section>
+		</div>
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/underscore.js"></script>
+		<script src="js/lib/backbone.js"></script>
+		<script src="js/data/FileManager.js"></script>
+		<script src="js/init.js"></script>
 	</body>
 </html>

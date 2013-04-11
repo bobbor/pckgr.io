@@ -1,0 +1,11 @@
+#project-listing footer {
+	& > div {
+		padding: 5px 10px;
+	}
+	.actions {
+		overflow: hidden;
+		margin: 0;
+		list-style: none;
+		width: 100%;
+	}
+}
