@@ -1,3 +1,19 @@
+#noproject {
+	text-align: center;
+	height: 50px;
+	line-height: 50px;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	text-transform: uppercase;
+	font-weight: bold;
+	color: $base;
+	font-size: 20px;
+	text-shadow: 1px 0px 1px darken($base, 30%), -1px 0 1px darken($base, 30%), 0 1px 1px darken($base, 30%), 0 -1px 1px darken($base, 30%);
+}
 .wrapper-outer {
 	padding: 0 0 0 15px;
 	box-sizing: border-box;

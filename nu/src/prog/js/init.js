@@ -1,21 +1,23 @@
-(function(F, undefined) {
+/*globals require:true */
+/*jslint white:true */
+(function(window) {
 	"use strict";
-	var app = {
-		go: function() {
-			F = {
-				core: {},
-				projects: {},
-				version: '0.1'
-			};
-		},
-		ready: function() {
-			F.core.save = new F.FileHandler('./data/savefile.frontender', {
-				create: true
-			}, []);
+	var
+		  $   = window.jQuery
+		, F   = window.Frontender
+		, app = {
+			go: function() {
+
+			},
+			ready: function() {
+				var mainView = new F.core.MainView({
+					el: $('#content')
+				});
+			}
 		}
-	};
+	;
 
 	app.go();
 	$(app.ready);
 
-}(this.Frontender, void 0));
+}(this));

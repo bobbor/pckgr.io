@@ -16,20 +16,7 @@
 					<section>
 						<div class="wrapper-outer">
 							<div id="content">
-								<section class="project">
-									<div class="box toggle-actions">
-										<div class="main">
-											<h1>Projekt A</h1>
-											<div class="preview">
-													<span class="label label-info">Compass</span>
-											</div>
-										</div>
-										<div class="actions btn-group">
-											<button class="btn btn-small detail expandable"><i class="fugue-cog"></i> Details</button>
-											<button class="btn btn-small btn-danger expandable"><i class="fugue-trash"></i> Delete</button>
-										</div>
-									</div>
-								</section>
+								<p id="noproject">There are no projects yet.</p>
 							</div>
 						</div>
 					</section>
@@ -44,10 +31,39 @@
 				</div>
 			</section>
 		</div>
+		<script type="text/template" id="projectView-template">
+			<div class="box toggle-actions">
+				<div class="main">
+					<h1><%= name %></h1>
+					<% if(features) { %>
+						<div class="preview">
+							<% for(var i = 0; i < features.length; i++) { %>
+								<span class="label label-info"><%= features[i] %></span>
+							<% } %>
+						</div>
+					<% } %>
+				</div>
+				<div class="actions btn-group">
+					<button class="btn btn-small detail expandable"><i class="fugue-cog"></i> Details</button>
+					<button class="btn btn-small btn-danger expandable delete"><i class="fugue-trash"></i> Delete</button>
+				</div>
+			</div>
+		</script>
 		<script src="js/lib/jquery.js"></script>
 		<script src="js/lib/underscore.js"></script>
 		<script src="js/lib/backbone.js"></script>
-		<script src="js/data/FileManager.js"></script>
+		<script>
+		window.Frontender = {
+			core: {},
+			version: '0.1'
+		};
+		</script>
+		<script src="js/helper/log.js"></script>
+		<script src="js/data/fs.js"></script>
+		<script src="js/index/Project.js"></script>
+		<script src="js/index/ProjectView.js"></script>
+		<script src="js/index/Projects.js"></script>
+		<script src="js/index/MainView.js"></script>
 		<script src="js/init.js"></script>
 	</body>
 </html>
