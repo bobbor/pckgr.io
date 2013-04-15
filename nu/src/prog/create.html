@@ -4,7 +4,6 @@
 		<meta charset="utf-8">
 		<title>Create New Project - Frontender</title>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
-		<link rel="stylesheet" href="css/index.css" />
 		<link rel="stylesheet" href="css/create.css" />
 	</head>
 	<body id="home">
@@ -14,19 +13,7 @@
 					<header>
 						<h4>Create Project</h4>
 					</header>
-					<section id="content">
-						<div>
-							<div class="step current">
-								<h4>Enter Title</h4>
-								<form class="form">
-									<input type="text" name="Name" class="input-block-level" placeholder="the nyan project" />
-									<span class="help-block">
-										here you define the name of the project to be created<br/>
-										can be changed later
-									</span>
-								</form>
-							</div>
-						</div>
+					<section id="content"><div></div>
 						<!--<canvas id="process_canvas" width="300" height="20"></canvas>-->
 					</section>
 					<footer>
@@ -39,18 +26,62 @@
 							</div>
 						</div>
 					</footer>
-				<div>
+				</div>
 			</section>
 		</div>
 		<script type="text/template" id="basicStep-template">
 			<h4><%= title %></h4>
 			<form class="form">
-				<input type="text" name="Name" class="input-block-level" placeholder="the nyan project" />
-				<span class="help-block">
-					here you define the name of the project to be created<br/>
-					can be changed later
-				</span>
+				<% for(var i = 0; i < inputs.length; i++) { %>
+					<% if(inputs[i].type === "multiple") { %>
+						<% for(var j = 0; j < inputs[i].attr.values.length; j++) { %>
+							<label class="<%= inputs[i].attr.type %>">
+								<% if(inputs[i].attr.type !== 'checkbox' && inputs[i].attr.type !== 'radio') { %>
+									<%= inputs[i].label[j] %>
+								<% } %>
+								<input<% for(var k in inputs[i].attr) {
+									if(k === 'values') { %>
+										 value="<%= inputs[i].attr.values[j] %>"
+									<% } else { %>
+										 <%= k %>="<%= inputs[i].attr[k] %>"
+									<% } %>
+								<% } %> />
+								<% if(inputs[i].attr.type === 'checkbox' || inputs[i].attr.type === 'radio') { %>
+									<%= inputs[i].label[j] %>
+								<% } %>
+							</label>
+						<% } %>
+					<% } else if(inputs[i].type === "single") { %>
+						<label class="<%= inputs[i].attr.type %>">
+							<% if(inputs[i].attr.type !== 'checkbox' && inputs[i].attr.type !== 'radio') { %>
+								<%= inputs[i].label[j] %>
+							<% } %>
+							<input<% for(var j in inputs[i].attr) { print(' '+j+'="'+inputs[i].attr[j]+'"'); } %> />
+							<% if(inputs[i].attr.type === 'checkbox' || inputs[i].attr.type === 'radio') { %>
+								<%= inputs[i].label[j] %>
+							<% } %>
+						</label>
+					<% } %>
+					<% if(inputs[i].helptext) { %>
+						<span class="help-block"><%= inputs[i].helptext %></span>
+					<% } %>
+				<% } %>
 			</form>
+		</script>
+		<script type="text/template" id="result-template">
+			<h4><%= title %></h4>
+			<% for(var i = 0;i < data.length; i++) { %>
+				<div class="row-fluid">
+					<div class="span12">
+						<dl class="dl-horizontal">
+							<dt><%= data[i].name %></dt>
+							<% for(var j = 0; j < data[i].vals.length; j++) { %>
+								<dd><%= data[i].vals[j] %></dd>
+							<% } %>
+						</dl>
+					</div>
+				</div>
+			<% } %>
 		</script>
 		<script src="js/lib/jquery.js"></script>
 		<script src="js/lib/underscore.js"></script>
@@ -64,10 +95,12 @@
 		</script>
 		<script src="js/helper/log.js"></script>
 		<script src="js/data/fsBridge.js"></script>
-		<script src="js/create/collections/Steps.js"></script>
 		<script src="js/create/models/Step.js"></script>
+		<script src="js/create/views/ResultView.js"></script>
 		<script src="js/create/views/StepView.js"></script>
+		<script src="js/create/collections/Steps.js"></script>
 		<script src="js/create/views/ProcessView.js"></script>
+		<script src="js/create/views/FooterView.js"></script>
 		<script src="js/create/init.js"></script>
 	</body>
 </html>

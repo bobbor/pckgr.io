@@ -5,11 +5,12 @@
 		"title" : "Enter Name",
 		"inputs" : [
 			{
-				"type" : "single", 
+				"type" : "single",
 				"attr" : {
 					"type" : "text",
 					"name" : "name",
-					"placeholder" : "the nyan project"
+					"placeholder" : "the nyan2 project",
+					"class": "input-block-level"
 				},
 				"label" : "Choose Name",
 				"helptext" : "here you define the name of the project to be created<br/>can be changed later"
@@ -25,10 +26,10 @@
 				"type": "multiple",
 				"attr": {
 					"type": "checkbox",
-					"name": "feature",
-					"values": ["", "pckgr", "compass"]
+					"name": "features",
+					"values": ["pckgr", "compass"]
 				},
-				"label": ["", "Packager", "Compass"]
+				"label": ["Packager", "Compass"]
 			}
 		]
 	},
@@ -50,5 +51,9 @@
 				"label": ["include your JS Library"]
 			}
 		]
+	},
+	{
+		"id": "result",
+		"title": "Result"
 	}
 ]

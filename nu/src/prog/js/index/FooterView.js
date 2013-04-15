@@ -15,15 +15,19 @@
 			"click button.create": "createNewProject"
 		},
 		createNewProject: function() {
-			var that = this;
-			this.createWindow = gui.Window.get(
-				window.open('create.html')
-			);
-
-			/*F.inst.saveFile.create({
-				name: 'Project B',
-				features: ['pckgr.io', 'compass']
-			});*/
+			var win = gui.Window.open('create.html', {
+				title: 'Create new Project',
+				toolbar: true,
+				position: 'mouse',
+				height: 350,
+				width: 500,
+				resizable: false,
+				'always-on-top': true
+			});
+			win.on('loaded', function() {
+				F.log(win.window.Frontender)
+				$.extend(true, win.window.Frontender,F);
+			})
 		}
 	});
 }(this));

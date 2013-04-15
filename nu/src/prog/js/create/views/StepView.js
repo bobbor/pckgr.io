@@ -16,8 +16,10 @@
 		initialize: function() {
 			this.listenTo(this.model, 'change', this.render);
 			this.listenTo(this.model, 'destroy', this.remove);
+			this.model.view = this;
 		},
 		render: function() {
+			this.$el.prop('id', this.model.id);
 			this.$el.html(this.template(this.model.toJSON()));
 			return this;
 		}

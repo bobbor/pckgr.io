@@ -21,15 +21,18 @@
 		, p           = require('path')
 	;
 
+	var origSync = Backbone.sync;
+
 	Backbone.sync = function(method, model, options) {
 		if(model.collection) {
 			model = model.collection;
 		}
-		var folderExists = function(path)         {
-			return fs.existsSync(path.join(p.sep));
-		};
+		if(model.url().indexOf('http') === 0) {
+			origSync.apply(this, arguments);
+			return;
+		}
+		var folderExists = function(path)         { return fs.existsSync(path.join(p.sep)); };
 		var folderCreate = function(path, isLast) { return  fs.mkdirSync(path.join(p.sep)); };
-
 		var createFile = function(model, callback) {
 			var   ret
 				, i
@@ -42,7 +45,6 @@
 			generatorLoop:
 			for(i = 1; i < path.length; i++) {
 				if(!folderExists(path.slice(0,i))) {
-					F.log('does not exist', path[i])
 					ret = folderCreate(path.slice(0,i));
 					if(ret) {
 						callback(false, ret);

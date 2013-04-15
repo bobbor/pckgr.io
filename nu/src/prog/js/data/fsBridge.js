@@ -16,16 +16,16 @@
 	_.extend(F.defs.FileBridge.prototype, Backbone.Events, {
 		read: function(callback) {
 			if(this.exists) {
-				fs.readFile(this.path, function(err, data) {
+				return fs.readFile(this.path, 'utf8', function(err, data) {
 					if(err) { return callback(false, err); }
-					callback(true, data);
+					return callback(true, data);
 				});
 			}
-			callback(false);
+			return callback(false);
 		},
 		write: function(data, callback) {
 			if(this.exists) {
-				fs.writeFile(this.path, data, function(err) {
+				fs.writeFile(this.path, data, 'utf8', function(err) {
 					if(err) { return callback(false, err); }
 					callback(true);
 				});

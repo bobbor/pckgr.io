@@ -1,5 +1,15 @@
+@import "defs/bootstrap";
 @import "defs/icons";
 @import "defs/definitions";
+@import "defs/jsp";
+@import "defs/layout";
+
+header {
+	padding: 0 15px;
+}
+footer>div {
+	padding: 5px 15px;
+}
 
 .step {
 	margin: 40px;
@@ -17,12 +27,6 @@
 .future {
 	display: none;
 }
-#step_name input {
-	margin: 10px 0;
-	font-size: 18px;
-	padding: 10px 8px;
-	height: auto;
-}
 
 canvas {
 	position: absolute;
@@ -31,3 +35,5 @@ canvas {
 	right: 0;
 	margin: 0 auto 10px;
 }
+
+.dl-horizontal { margin: 5px 0; }
