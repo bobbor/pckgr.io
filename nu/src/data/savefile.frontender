@@ -1,13 +1,1 @@
-[
-	{
-		"url": "file:///C:/Users/philipp.paul/Documents/workspace/alphabet/html-prototyp/js/project.jspackcfg",
-		"name": "Alphabet",
-		"readableURL": "C:\\Users\\philipp.paul\\Documents\\workspace\\alphabet\\html-prototyp\\js\\project.jspackcfg",
-		"features": ["pckgr.io"]
-	},
-	{
-		"url": "file:///C:/Users/philipp.paul/Documents/workspace/Aamt%5b3.02%5d/Wizzard/js/project.jspackcfg",
-		"name": "avcms 3.02 wizzard",
-		"readableURL": "C:\\Users\\philipp.paul\\Documents\\workspace\\Aamt[3.02]\\Wizzard\\js\\project.jspackcfg"
-	}
-]
+[{"name":"Project C","features":["pckgr.io","compass"]}]

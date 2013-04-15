@@ -52,6 +52,7 @@
 		var err = getErrorObject();
 		var call_stack = err.stack.split('\n');
 		arr_remove(call_stack, 0,4);
+		arr_remove(call_stack, 1, -1)
 		for(var i = call_stack.length;i--;) {
 			call_stack[i] = call_stack[i].slice((call_stack[i].indexOf("at ") || 0)+2, call_stack[i].length);
 		}

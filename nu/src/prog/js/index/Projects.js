@@ -9,10 +9,16 @@
 		, Backbone = window.Backbone
 	;
 
-	F.core.SaveFile = F.core.File.extend({
-		model: F.core.Project,
+	F.defs.SaveFile = Backbone.Collection.extend({
+		model: F.defs.Project,
 		url: function() {
 			return 'data/savefile.frontender';
+		},
+		initialize: function() {
+			this.on('destroy', this.onDestroy, this);
+		},
+		onDestroy: function(model, collection, options) {
+			this.sync('update', collection, options);
 		}
 	});
 }(this));

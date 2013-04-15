@@ -23,8 +23,8 @@
 					<footer class="toggle-actions">
 						<div>
 							<div class="actions btn-group">
-								<button class="btn btn-small expandable" data-action="create"><i class="fugue-plus"></i> New Project</button>
-								<button class="btn btn-small expandable" data-action="import"><i class="fugue-import"></i> Import Project</button>
+								<button class="btn btn-small expandable create"><i class="fugue-plus"></i> New Project</button>
+								<button class="btn btn-small expandable import"><i class="fugue-import"></i> Import Project</button>
 							</div>
 						</div>
 					</footer>
@@ -53,17 +53,19 @@
 		<script src="js/lib/underscore.js"></script>
 		<script src="js/lib/backbone.js"></script>
 		<script>
-		window.Frontender = {
-			core: {},
+		window.Frontender || (window.Frontender = {
+			defs: {},
+			inst: {},
 			version: '0.1'
-		};
+		});
 		</script>
 		<script src="js/helper/log.js"></script>
-		<script src="js/data/fs.js"></script>
+		<script src="js/data/bbfs.js"></script>
 		<script src="js/index/Project.js"></script>
 		<script src="js/index/ProjectView.js"></script>
 		<script src="js/index/Projects.js"></script>
 		<script src="js/index/MainView.js"></script>
+		<script src="js/index/FooterView.js"></script>
 		<script src="js/init.js"></script>
 	</body>
 </html>

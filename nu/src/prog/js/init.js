@@ -6,12 +6,14 @@
 		  $   = window.jQuery
 		, F   = window.Frontender
 		, app = {
-			go: function() {
-
-			},
+			go: function() {},
 			ready: function() {
-				var mainView = new F.core.MainView({
+				F.inst.saveFile = new F.defs.SaveFile()
+				var mainView = new F.defs.MainView({
 					el: $('#content')
+				});
+				var footer = new F.defs.FooterView({
+					el: $('footer')
 				});
 			}
 		}

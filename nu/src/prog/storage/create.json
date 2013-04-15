@@ -1,0 +1,54 @@
+[
+	{
+		"id" : "create-name-01",
+		"depends" : false,
+		"title" : "Enter Name",
+		"inputs" : [
+			{
+				"type" : "single", 
+				"attr" : {
+					"type" : "text",
+					"name" : "name",
+					"placeholder" : "the nyan project"
+				},
+				"label" : "Choose Name",
+				"helptext" : "here you define the name of the project to be created<br/>can be changed later"
+			}
+		]
+	},
+	{
+		"id" : "create-feature-01",
+		"depends" : false,
+		"title" : "Choose Feature",
+		"inputs": [
+			{
+				"type": "multiple",
+				"attr": {
+					"type": "checkbox",
+					"name": "feature",
+					"values": ["", "pckgr", "compass"]
+				},
+				"label": ["", "Packager", "Compass"]
+			}
+		]
+	},
+	{
+		"id": "create-pckgr-01",
+		"depends": {
+			"create-feature-01": "pckgr",
+			"setting": "pckgr-bootstrap-path"
+		},
+		"title": "Packager Library",
+		"inputs": [
+			{
+				"type": "multiple",
+				"attr": {
+					"type": "checkbox",
+					"name": "pckgr-library",
+					"values": ["use-library"]
+				},
+				"label": ["include your JS Library"]
+			}
+		]
+	}
+]
