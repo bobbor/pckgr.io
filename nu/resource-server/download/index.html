@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>pckgr.io</title>
+		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body id="home">
+		<div id="wrapper">
+			<section class="column">
+				<div>
+					<header>
+						<h4>Frontender 2</h4>
+					</header>
+					<section>
+						<div class="wrapper-outer">
+							<div id="content">
+								<p id="noproject">There are no projects yet.</p>
+							</div>
+						</div>
+					</section>
+					<footer class="toggle-actions">
+						<div>
+							<div class="actions btn-group">
+								<button class="btn btn-small expandable create"><i class="fugue-plus"></i> New Project</button>
+								<button class="btn btn-small expandable import"><i class="fugue-import"></i> Import Project</button>
+							</div>
+						</div>
+					</footer>
+				</div>
+			</section>
+		</div>
+		<script type="text/template" id="projectView-template">
+			<div class="box toggle-actions">
+				<div class="main">
+					<h1><%= name %></h1>
+					<% if(features) { %>
+						<div class="preview">
+							<% for(var i = 0; i < features.length; i++) { %>
+								<span class="label label-info"><%= features[i] %></span>
+							<% } %>
+						</div>
+					<% } %>
+				</div>
+				<div class="actions btn-group">
+					<button class="btn btn-small detail expandable"><i class="fugue-cog"></i> Details</button>
+					<button class="btn btn-small btn-danger expandable delete"><i class="fugue-trash"></i> Delete</button>
+				</div>
+			</div>
+		</script>
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/underscore.js"></script>
+		<script src="js/lib/backbone.js"></script>
+		<script>
+			window.Frontender || (window.Frontender = {
+				defs: {},
+				inst: {}
+			});
+		</script>
+		<script src="js/helper/log.js"></script>
+		<script src="js/data/httpBridge.js"></script>
+		<script src="js/data/fsBridge.js"></script>
+		<script src="js/update/updater.js"></script>
+		<script src="js/data/bbfs.js"></script>
+		<script src="js/index/Project.js"></script>
+		<script src="js/index/ProjectView.js"></script>
+		<script src="js/index/Projects.js"></script>
+		<script src="js/index/MainView.js"></script>
+		<script src="js/index/FooterView.js"></script>
+		<script src="js/init.js"></script>
+	</body>
+</html>
