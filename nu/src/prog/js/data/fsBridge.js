@@ -6,6 +6,7 @@
 		, _        = window._
 		, Backbone = window.Backbone
 		, fs       = require('fs')
+		, p        = require('path')
 	;
 
 	F.defs.FileBridge = function(path) {
@@ -23,10 +24,12 @@
 			}
 			return callback(false);
 		},
-		write: function(data, callback) {
-			if(this.exists) {
+		write: function(data, callback, force) {
+			var that = this;
+			if(this.exists || force) {
 				fs.writeFile(this.path, data, 'utf8', function(err) {
 					if(err) { return callback(false, err); }
+					that.exists = true;
 					callback(true);
 				});
 			}

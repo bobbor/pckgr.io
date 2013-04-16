@@ -28,7 +28,6 @@
 	};
 
 	$(function() {
-		var projectData = [];
 		var mainContent = $('#content > div');
 		F.inst.createSteps = new F.defs.CreateSteps()
 
@@ -41,17 +40,19 @@
 
 		footerView.on('goForth', function() {
 			if(footerView.forth.is('.done')) {
-				F.inst.saveFile.create(flatten(projectData));
+				var steps = $('form', mainContent);
+				var data = steps.map(function() { return $(this).serializeArray(); }).get();
+				window.FrontenderBridge('saveFile', 'create', flatten(data));
 				window.close();
 			}
 		});
 
 		createProcess.on('indexChange', function() {
-			var steps = $('form', mainContent), resultMap;
-			projectData = steps.map(function() {
+			var steps = $('form', mainContent);
+			var data = steps.map(function() {
 				return $(this).serializeArray();
 			}).get();
-			F.inst.createSteps.get('result').set({data: projectData});
+			F.inst.createSteps.get('result').set('data', data);
 		});
 
 		createProcess.listenTo(footerView, 'goForth', createProcess.goForth);

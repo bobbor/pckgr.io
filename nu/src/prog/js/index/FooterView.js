@@ -17,7 +17,7 @@
 		createNewProject: function() {
 			var win = gui.Window.open('create.html', {
 				title: 'Create new Project',
-				toolbar: true,
+				toolbar: false,
 				position: 'mouse',
 				height: 350,
 				width: 500,
@@ -25,8 +25,9 @@
 				'always-on-top': true
 			});
 			win.on('loaded', function() {
-				F.log(win.window.Frontender)
-				$.extend(true, win.window.Frontender,F);
+				win.window.FrontenderBridge = function(inst, method, val) {
+					F.inst[inst][method](val);
+				}
 			})
 		}
 	});
