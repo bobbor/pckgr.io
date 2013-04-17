@@ -27,7 +27,7 @@
 		},
 		render: function() {
 			this.$el.prop('id', this.model.id);
-			var json = _.extend({}, this.model.toJSON());
+			/*var json = _.extend({}, this.model.toJSON());
 			var dat = [];
 
 			json.data = json.data || dat;
@@ -46,7 +46,7 @@
 				continue;
 			}
 			json.data = dat.reverse();
-			this.$el.html(this.template(json));
+			this.$el.html(this.template(json));*/
 			return this;
 		}
 	});

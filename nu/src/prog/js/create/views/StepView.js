@@ -21,6 +21,7 @@
 		render: function() {
 			this.$el.prop('id', this.model.id);
 			this.$el.html(this.template(this.model.toJSON()));
+			$('input.input_file', this.el).fileReplace();
 			return this;
 		}
 	})

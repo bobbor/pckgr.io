@@ -37,3 +37,9 @@ canvas {
 }
 
 .dl-horizontal { margin: 5px 0; }
+
+.step label.checkbox {
+	width: 50%;
+	float: left;
+	box-sizing: border-box;
+}

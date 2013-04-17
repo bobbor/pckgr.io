@@ -19,19 +19,14 @@
 			this.listenTo(F.inst.createSteps, 'sync', function() {
 				that.changeIndex(that.index);
 			});
-
 			F.inst.createSteps.fetch();
 		},
 		addOne: function(model) {
 			var view;
 			if(model.id === 'result') {
-				view = new F.defs.ResultView({
-					model: model
-				});
+				view = new F.defs.ResultView({ model: model });
 			} else {
-				view = new F.defs.StepView({
-					model: model
-				});
+				view = new F.defs.StepView({ model: model });
 			}
 
 			this.$el.append(view.render().el);

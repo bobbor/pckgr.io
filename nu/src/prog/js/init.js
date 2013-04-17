@@ -10,8 +10,8 @@
 			go: function() {
 				F.inst.mainWindow = gui.Window.get();
 				F.inst.updater = new F.defs.Updater('http://localhost:8080');
-				F.inst.updater.on('updateAvailable', function() {
-					if(confirm('wanna update?')) {
+				F.inst.updater.on('updateAvailable', function(current, newversion) {
+					if(confirm('an update is available\nfrom version '+current+' to version '+newversion+'\nwanna update?')) {
 						F.inst.updater.download();
 					}
 				})

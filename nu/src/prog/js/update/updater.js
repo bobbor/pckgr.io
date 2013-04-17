@@ -21,24 +21,24 @@
 			version.write("4.0.0.0", function() {}, true);
 		}
 		var check = function() {
-			version.read(function(success, data) {
-				if(!success) {
-					that.trigger('read_error');
-				}
-				that.version = JSON.parse(data);
-				remote = new F.defs.HTTPBridge(that.url+'/update?ver='+that.version);
-				that.check();
-			});
+			remote = new F.defs.HTTPBridge(that.url+'/update?ver='+that.version);
+			that.check();
 		};
 
-		if(fs.existsSync('update_in_progress')) {
-			fs.unlinkSync('update_in_progress');
-			$(window).on('load', function() {
-				alert('done');
-			});
-		} else {
-			check();
-		}
+		version.read(function(success, data) {
+			if(!success) {
+				that.trigger('read_error');
+			}
+			that.version = JSON.parse(data);
+			if(fs.existsSync('update_in_progress')) {
+				fs.unlinkSync('update_in_progress');
+				alert('updated to version '+that.version);
+			} else {
+				check();
+			}
+		});
+
+
 	};
 	_.extend(F.defs.Updater.prototype, Backbone.Events, {
 		check: function(silent) {
@@ -48,7 +48,7 @@
 					if(data.length) {
 						that.updateData = JSON.parse(data);
 						if(!silent) {
-							that.trigger('updateAvailable')
+							that.trigger('updateAvailable', that.version, that.updateData.version);
 						}
 					}
 				});

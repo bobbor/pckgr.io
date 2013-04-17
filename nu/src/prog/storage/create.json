@@ -15,7 +15,27 @@
 				"label" : "Choose Name",
 				"helptext" : "here you define the name of the project to be created<br/>can be changed later"
 			}
-		]
+		],
+		"result": "Name"
+	},
+	{
+		"id": "create-location-01",
+		"depends": false,
+		"title": "Specify Location",
+		"inputs": [
+			{
+				"type": "single",
+				"attr": {
+					"type": "file",
+					"name": "location",
+					"nwdirectory": "",
+					"class": "input_file input_file_folder input-block-level"
+				},
+				"label": "Choose Location",
+				"helptext": "please specify where the project should be located at."
+			}
+		],
+		"result": "Location"
 	},
 	{
 		"id" : "create-feature-01",
@@ -50,7 +70,8 @@
 				},
 				"label": ["include your JS Library"]
 			}
-		]
+		],
+		"result": "include my JS Lib"
 	},
 	{
 		"id": "result",

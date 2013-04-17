@@ -17,7 +17,7 @@
 		createNewProject: function() {
 			var win = gui.Window.open('create.html', {
 				title: 'Create new Project',
-				toolbar: false,
+				toolbar: true,
 				position: 'mouse',
 				height: 350,
 				width: 500,

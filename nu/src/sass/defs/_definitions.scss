@@ -88,3 +88,14 @@ input.editableinput {
 :focus {
 	outline: none;
 }
+
+input.file_replace {
+	@extend .fugue-folder;
+	background-position: 99% center;
+	background-repeat: no-repeat;
+	padding-right: 31px;
+	cursor: pointer;
+	&:hover {
+		@extend .fugue-folder-open;
+	}
+}

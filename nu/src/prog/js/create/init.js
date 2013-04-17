@@ -29,7 +29,7 @@
 
 	$(function() {
 		var mainContent = $('#content > div');
-		F.inst.createSteps = new F.defs.CreateSteps()
+		F.inst.createSteps = new F.defs.CreateSteps();
 
 		var createProcess = new F.defs.ProcessView({
 			el: mainContent
@@ -42,16 +42,26 @@
 			if(footerView.forth.is('.done')) {
 				var steps = $('form', mainContent);
 				var data = steps.map(function() { return $(this).serializeArray(); }).get();
-				window.FrontenderBridge('saveFile', 'create', flatten(data));
+				data = flatten(data);
+				if(!_.isArray(data.features)) {
+					data.features = [data.features];
+				}
+				window.FrontenderBridge('saveFile', 'create', data);
 				window.close();
 			}
 		});
 
 		createProcess.on('indexChange', function() {
 			var steps = $('form', mainContent);
-			var data = steps.map(function() {
-				return $(this).serializeArray();
-			}).get();
+			var data = F.inst.createSteps.map(function(model) {
+				if(model.id === 'result') { return {}; }
+				return {
+					form: model.view.$el.find('form').serializeArray(),
+					data: model.toJSON()
+				};
+			}).filter(function(item) {
+				return 'form' in item;
+			});
 			F.inst.createSteps.get('result').set('data', data);
 		});
 
