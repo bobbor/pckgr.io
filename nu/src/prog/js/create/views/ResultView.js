@@ -27,26 +27,10 @@
 		},
 		render: function() {
 			this.$el.prop('id', this.model.id);
-			/*var json = _.extend({}, this.model.toJSON());
-			var dat = [];
-
-			json.data = json.data || dat;
-			jsonloop:
-			for(var i = json.data.length; i--;) {
-				datloop:
-				for(var j = 0; j < dat.length; j++) {
-					if(dat[j].name === json.data[i].name) {
-						dat[j].vals.push(json.data[i].value);
-						continue jsonloop;
-					}
-				}
-				dat.push(json.data[i]);
-				dat[dat.length-1].vals = [dat[dat.length-1].value];
-				delete dat[dat.length-1].value;
-				continue;
+			var json = this.model.toJSON();
+			if(json.data) {
+				this.$el.html(this.template(json));
 			}
-			json.data = dat.reverse();
-			this.$el.html(this.template(json));*/
 			return this;
 		}
 	});

@@ -46,6 +46,11 @@
 		},
 		changeIndex: function(idx) {
 			var that = this;
+			if(this.initialized && idx > this.index) {
+				if(!F.inst.createSteps.at(this.index).validate()) {
+					return;
+				}
+			}
 			this.index = ('number' === typeof idx) ? idx : this.index;
 			F.inst.createSteps.each(function(model, idx) {
 				if(idx < that.index) {
@@ -57,6 +62,7 @@
 				}
 			});
 			this.trigger('indexChange', 0, that.index, F.inst.createSteps.length-1);
+			this.initialized = true;
 		}
 	})
 

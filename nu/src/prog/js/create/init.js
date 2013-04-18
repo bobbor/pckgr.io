@@ -43,9 +43,6 @@
 				var steps = $('form', mainContent);
 				var data = steps.map(function() { return $(this).serializeArray(); }).get();
 				data = flatten(data);
-				if(!_.isArray(data.features)) {
-					data.features = [data.features];
-				}
 				window.FrontenderBridge('saveFile', 'create', data);
 				window.close();
 			}

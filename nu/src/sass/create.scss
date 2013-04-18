@@ -36,7 +36,19 @@ canvas {
 	margin: 0 auto 10px;
 }
 
-.dl-horizontal { margin: 5px 0; }
+.dl-horizontal {
+	margin: 5px 0;
+
+	dt {
+		width: 90px;
+	}
+	dd {
+		margin-left: 110px;
+		text-overflow: ellipsis;
+		overflow: hidden;
+		white-space: nowrap;
+	}
+}
 
 .step label.checkbox {
 	width: 50%;

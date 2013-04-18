@@ -74,10 +74,8 @@
 				<div class="row-fluid">
 					<div class="span12">
 						<dl class="dl-horizontal">
-							<dt><%= data[i].name %></dt>
-							<% for(var j = 0; j < data[i].vals.length; j++) { %>
-								<dd><%= data[i].vals[j] %></dd>
-							<% } %>
+							<dt><%= data[i].data.result %></dt>
+							<dd><%= data[i].form[0].value %></dd>
 						</dl>
 					</div>
 				</div>

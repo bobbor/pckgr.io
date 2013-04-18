@@ -27,7 +27,7 @@
 				"type": "single",
 				"attr": {
 					"type": "file",
-					"name": "location",
+					"name": "url",
 					"nwdirectory": "",
 					"class": "input_file input_file_folder input-block-level"
 				},
@@ -36,42 +36,6 @@
 			}
 		],
 		"result": "Location"
-	},
-	{
-		"id" : "create-feature-01",
-		"depends" : false,
-		"title" : "Choose Feature",
-		"inputs": [
-			{
-				"type": "multiple",
-				"attr": {
-					"type": "checkbox",
-					"name": "features",
-					"values": ["pckgr", "compass"]
-				},
-				"label": ["Packager", "Compass"]
-			}
-		]
-	},
-	{
-		"id": "create-pckgr-01",
-		"depends": {
-			"create-feature-01": "pckgr",
-			"setting": "pckgr-bootstrap-path"
-		},
-		"title": "Packager Library",
-		"inputs": [
-			{
-				"type": "multiple",
-				"attr": {
-					"type": "checkbox",
-					"name": "pckgr-library",
-					"values": ["use-library"]
-				},
-				"label": ["include your JS Library"]
-			}
-		],
-		"result": "include my JS Lib"
 	},
 	{
 		"id": "result",
