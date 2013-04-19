@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>pckgr.io</title>
+		<title>Sluraff</title>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
 		<link rel="stylesheet" href="css/index.css" />
 	</head>
@@ -34,6 +34,7 @@
 		</div>
 		<input style="display:none;" id="fileImportDialog" type="file" accept="*.sluraff" />
 		<input style="display:none;" id="folderImportDialog" type="file" nwdirectory />
+
 		<script type="text/template" id="projectView-template">
 			<div class="box toggle-actions">
 				<div class="main">
@@ -66,12 +67,14 @@
 		<script src="js/data/httpBridge.js"></script>
 		<script src="js/data/fsBridge.js"></script>
 		<script src="js/helper/updater.js"></script>
+		<script src="js/helper/guid.js"></script>
 		<script src="js/data/bbfs.js"></script>
-		<script src="js/index/Project.js"></script>
-		<script src="js/index/ProjectView.js"></script>
-		<script src="js/index/Projects.js"></script>
-		<script src="js/index/MainView.js"></script>
-		<script src="js/index/FooterView.js"></script>
-		<script src="js/init.js"></script>
+
+		<script src="js/index/models/Project.js"></script>
+		<script src="js/index/views/ProjectView.js"></script>
+		<script src="js/index/collections/Projects.js"></script>
+		<script src="js/index/views/MainView.js"></script>
+		<script src="js/index/views/FooterView.js"></script>
+		<script src="js/index/init.js"></script>
 	</body>
 </html>

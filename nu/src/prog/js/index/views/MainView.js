@@ -17,7 +17,7 @@
 			this.listenTo(F.inst.saveFile, 'all', this.render);
 
 			this.hint = this.$('#noproject');
-			
+
 			F.inst.saveFile.fetch();
 		},
 		render: function() {

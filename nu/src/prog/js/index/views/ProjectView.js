@@ -27,27 +27,32 @@
 			return this;
 		},
 		clear: function() {
+			if(global.windows.detail[id]) {
+				global.windows.detail[id][0].close(true);
+			}
 			this.model.destroy();
 		},
 		openDetails: function() {
 			var that = this;
-			if(this.model.window) {
-				this.model.window.focus();
+			var id = this.model.id;
+
+			if(global.windows.detail[id]) {
+				global.windows.detail[id][0].focus();
 				return;
 			}
-			var win = gui.Window.open('detail.html', {
-				title: 'Details',
+			var win = gui.Window.open('detail.html?id='+id, {
+				title: this.model.get('name'),
 				toolbar: true,
-				height: 430,
-				width: 830
+				height: 550,
+				width: 950
 			});
-			this.model.window = win;
-			win.on('loaded', function() {
-				win.window.Sluraff.basis = that.model;
-				win.window.SluraffBridge = function(inst, method, val) {
-					F.inst[inst][method](val);
-				}
+			global.windows.detail[id] = [win, this.model];
+			win.on('close', function() {
+				this.hide();
+				global.windows.detail[id] = !1;
+				this.close(true);
 			});
+			win.showDevTools();
 		}
 	});
 }(this));

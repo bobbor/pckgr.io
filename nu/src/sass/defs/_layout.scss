@@ -43,7 +43,8 @@ section:focus, {
 		border-bottom: 1px solid darken($color, 10%);
 	}
 
-	& > div > section {
+	& > div > section,
+	#feature_content_space section {
 		position: absolute;
 		top: 40px;
 		bottom: 41px;

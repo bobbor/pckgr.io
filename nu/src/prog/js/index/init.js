@@ -1,4 +1,4 @@
-/*globals require:true */
+/*globals require:true, global:true */
 /*jslint white:true */
 (function(window) {
 	"use strict";
@@ -15,7 +15,26 @@
 					if(confirm('an update is available\nfrom version '+current+' to version '+newversion+'\nwanna update?')) {
 						F.inst.updater.download();
 					}
-				})
+				});
+				// storing all windows on global scope
+				global.windows = {
+					main: gui.Window.get(),
+					detail: {}
+				};
+
+				global.windows.main.on('close', function() {
+					if(global.windows.creator !== void 0) {
+						try {
+							global.windows.creator.close(true);
+						} catch(o_O) { }
+					}
+					for(var prop in global.windows.detail) {
+						try {
+							global.windows.detail[prop][0].close(true);
+						} catch(o_O) { }
+					}
+					this.close(true);
+				});
 			},
 			ready: function() {
 				F.inst.saveFile = new F.defs.SaveFile()

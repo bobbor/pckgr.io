@@ -18,20 +18,19 @@
 			"click button.import-folder": "importFromFolder"
 		},
 		createNewProject: function() {
+			if(global.windows.creator !== void 0) {
+				global.windows.creator.focus();
+				return;
+			}
 			var win = gui.Window.open('create.html', {
 				title: 'Create new Project',
 				toolbar: true,
-				position: 'mouse',
 				height: 350,
 				width: 500,
 				resizable: false,
 				'always-on-top': true
 			});
-			win.on('loaded', function() {
-				win.window.SluraffBridge = function(inst, method, val) {
-					F.inst[inst][method](val);
-				}
-			})
+			global.windows.creator = win;
 		},
 		importFromFile: function() {
 			$('#fileImportDialog')

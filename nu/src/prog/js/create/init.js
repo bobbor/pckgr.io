@@ -7,6 +7,7 @@
 		, $        = window.jQuery
 		, _        = window._
 		, Backbone = window.Backbone
+		, mainF    = global.windows.main.window.Sluraff
 	;
 
 	window.opener && window.opener.Sluraff && (
@@ -43,8 +44,9 @@
 				var steps = $('form', mainContent);
 				var data = steps.map(function() { return $(this).serializeArray(); }).get();
 				data = flatten(data);
-				data.url += '/project.sluraff'
-				window.SluraffBridge('saveFile', 'create', data);
+				data.url += '/project.sluraff';
+				data.id = F.guid();
+				mainF.inst.saveFile.create(data);
 				window.close();
 			}
 		});

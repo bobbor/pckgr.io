@@ -32,6 +32,7 @@
 					that.exists = true;
 					callback(true);
 				});
+				return;
 			}
 			callback(false);
 		}
