@@ -3,7 +3,7 @@
 (function(window) {
 	"use strict";
 	var
-		  F        = window.Frontender
+		  F        = window.Sluraff
 		, $        = window.jQuery
 		, _        = window._
 		, Backbone = window.Backbone
@@ -14,9 +14,7 @@
 			switch(this.id) {
 				case "create-name-01":
 				case "create-location-01":
-					r = this.view.$el.find('form').serializeArray();
-					r = r[0].value
-					console.log(r, ''+r===r, r.length, (''+r===r && r.length))
+					r = this.view.$el.find('form').serializeArray()[0].value;
 					return (''+r===r && r.length);
 			}
 			return true;

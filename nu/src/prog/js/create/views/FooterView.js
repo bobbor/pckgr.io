@@ -3,24 +3,12 @@
 (function(window) {
 	"use strict";
 	var
-		  F           = window.Frontender
+		  F           = window.Sluraff
 		, $           = window.jQuery
 		, _           = window._
 		, Backbone    = window.Backbone
 		, createSteps = new F.defs.CreateSteps()
 	;
-
-	$.fn.extend({
-		ownText: function(t) {
-			return this.each(function() {
-				var html = this.innerHTML;
-				var text = this.innerText;
-
-				var re = new RegExp(text);
-				$(this).html(html.replace(re, t));
-			});
-		}
-	});
 
 	F.defs.CreateFooterView = Backbone.View.extend({
 		nextText: 'Next ',

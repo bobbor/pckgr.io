@@ -3,14 +3,14 @@
 (function(window) {
 	"use strict";
 	var
-		  F        = window.Frontender
+		  F        = window.Sluraff
 		, $        = window.jQuery
 		, _        = window._
 		, Backbone = window.Backbone
 	;
 
-	window.opener && window.opener.Frontender && (
-		$.extend(true, F, window.opener.Frontender)
+	window.opener && window.opener.Sluraff && (
+		$.extend(true, F, window.opener.Sluraff)
 	);
 	var flatten = function(s/*erializedArray*/) {
 		var ret = {};
@@ -43,7 +43,8 @@
 				var steps = $('form', mainContent);
 				var data = steps.map(function() { return $(this).serializeArray(); }).get();
 				data = flatten(data);
-				window.FrontenderBridge('saveFile', 'create', data);
+				data.url += '/project.sluraff'
+				window.SluraffBridge('saveFile', 'create', data);
 				window.close();
 			}
 		});

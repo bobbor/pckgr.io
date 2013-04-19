@@ -1,7 +1,7 @@
 (function(window) {
 	"use strict";
 	var
-		  F        = window.Frontender
+		  F        = window.Sluraff
 		, $        = window.jQuery
 		, _        = window._
 		, Backbone = window.Backbone

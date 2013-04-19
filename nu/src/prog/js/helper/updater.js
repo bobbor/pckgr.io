@@ -4,7 +4,7 @@
 	"use strict";
 	var
 		  $        = window.jQuery
-		, F        = window.Frontender
+		, F        = window.Sluraff
 		, _        = window._
 		, Backbone = window.Backbone
 		, version  = new F.defs.FileBridge('prog/version')

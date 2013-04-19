@@ -4,21 +4,25 @@
 		<meta charset="utf-8">
 		<title>pckgr.io</title>
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
-		<link rel="stylesheet" href="style/style.css" />
-		<link rel="stylesheet" href="style/jquery.jscrollpane.css" />
-		<script>
-			window.Frontender || (window.Frontender = {});
-			window.Frontender.version = '0.1';
-		</script>
-		<script src="js/lib/script.min.js"></script>
+		<link rel="stylesheet" href="css/style.css" />
 	</head>
-	<body class="compass">
+	<body class="compass detail">
 		<div id="wrapper">
 			<section id="project-listing" class="column">
 				<div>
 					<header>
 					</header>
-					<section id="project-items"><div><ol></ol></div></section>
+					<section id="project-items"><div><ol>
+						<li>
+							<div>
+								<h2>Packager</h2>
+								<span class="change">
+									<time datetime="2012-11-12">2mo ago</time>
+								</span>
+								<a class="delete"><i class="fugue-trash"></i> </a>
+							</div>
+						</li>
+					</ol></div></section>
 					<footer class="toggle-actions">
 						<div>
 							<div class="actions btn-group">
@@ -623,7 +627,7 @@
 					<section class="compass console content target">
 <pre><code>/-------------------------------------------------------------------------------\
 |                                                                               |
-| Frontender Console                                                            |
+| Sluraff Console                                                               |
 |                                                                               |
 | to log your output                                                            |
 |                                                                               |
@@ -662,7 +666,16 @@
 				<a class="delete"><i class="fugue-trash"></i> </a>
 			</div>
 		</script>
-		<script src="js/main.js"></script>
-		<script src="js/detail/detail.js"></script>
+		<script src="js/lib/jquery.js"></script>
+		<script src="js/lib/underscore.js"></script>
+		<script src="js/lib/backbone.js"></script>
+		<script>
+			window.Sluraff || (window.Sluraff = {
+				defs: {},
+				inst: {}
+			});
+		</script>
+		<script src="js/helper/plugs.js"></script>
+		<script src="js/helper/log.js"></script>
 	</body>
 </html>

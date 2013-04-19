@@ -1,7 +1,6 @@
 [
 	{
 		"id" : "create-name-01",
-		"depends" : false,
 		"title" : "Enter Name",
 		"inputs" : [
 			{
@@ -20,7 +19,6 @@
 	},
 	{
 		"id": "create-location-01",
-		"depends": false,
 		"title": "Specify Location",
 		"inputs": [
 			{

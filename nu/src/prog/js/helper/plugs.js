@@ -15,6 +15,15 @@
 					replace.val($node.val());
 				});
 			});
+		},
+		ownText: function(t) {
+			return this.each(function() {
+				var html = this.innerHTML;
+				var text = this.innerText;
+
+				var re = new RegExp(text);
+				$(this).html(html.replace(re, t));
+			});
 		}
 	});
 }(this));

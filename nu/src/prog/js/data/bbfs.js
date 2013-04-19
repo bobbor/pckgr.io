@@ -2,7 +2,7 @@
 
  * Backbone Sync override
 
- * Part of Frontender
+ * Part of Sluraff
  * Licensed under GPLv2
 
  * @author bobbor (me@philipp-paul.com)
@@ -13,7 +13,7 @@
 (function(window) {
 	"use strict";
 	var
-		  F           = window.Frontender
+		  F           = window.Sluraff
 		, $           = window.jQuery
 		, _           = window._
 		, Backbone    = window.Backbone

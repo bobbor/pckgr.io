@@ -1,6 +1,6 @@
 (function(window, undefined) {
 	"use strict";
-	var F = window.Frontender;
+	var F = window.Sluraff;
 	var LOG_VERBOSE = 0,
 		LOG_INFO = 1,
 		LOG_WARN = 2,

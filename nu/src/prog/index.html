@@ -11,7 +11,7 @@
 			<section class="column">
 				<div>
 					<header>
-						<h4>Frontender</h4>
+						<h4>Sluraff</h4>
 					</header>
 					<section>
 						<div class="wrapper-outer">
@@ -24,13 +24,16 @@
 						<div>
 							<div class="actions btn-group">
 								<button class="btn btn-small expandable create"><i class="fugue-plus"></i> New Project</button>
-								<button class="btn btn-small expandable import"><i class="fugue-import"></i> Import Project</button>
+								<button class="btn btn-small expandable import-file"><i class="fugue-import"></i> Import Project</button>
+								<button class="btn btn-small expandable import-folder"><i class="fugue-import"></i> Import Folder</button>
 							</div>
 						</div>
 					</footer>
 				</div>
 			</section>
 		</div>
+		<input style="display:none;" id="fileImportDialog" type="file" accept="*.sluraff" />
+		<input style="display:none;" id="folderImportDialog" type="file" nwdirectory />
 		<script type="text/template" id="projectView-template">
 			<div class="box toggle-actions">
 				<div class="main">
@@ -53,15 +56,16 @@
 		<script src="js/lib/underscore.js"></script>
 		<script src="js/lib/backbone.js"></script>
 		<script>
-			window.Frontender || (window.Frontender = {
+			window.Sluraff || (window.Sluraff = {
 				defs: {},
 				inst: {}
 			});
 		</script>
+		<script src="js/helper/plugs.js"></script>
 		<script src="js/helper/log.js"></script>
 		<script src="js/data/httpBridge.js"></script>
 		<script src="js/data/fsBridge.js"></script>
-		<script src="js/update/updater.js"></script>
+		<script src="js/helper/updater.js"></script>
 		<script src="js/data/bbfs.js"></script>
 		<script src="js/index/Project.js"></script>
 		<script src="js/index/ProjectView.js"></script>

@@ -4,8 +4,9 @@
 	"use strict";
 	var
 		  $   = window.jQuery
-		, F   = window.Frontender
+		, F   = window.Sluraff
 		, gui = require('nw.gui')
+		, fs  = require('fs')
 		, app = {
 			go: function() {
 				F.inst.mainWindow = gui.Window.get();
@@ -24,6 +25,14 @@
 				var footer = new F.defs.FooterView({
 					el: $('footer')
 				});
+				F.inst.saveFile.on('create', function(model) {
+					var file = model.get('url'), data;
+					if(!fs.existsSync(file)) {
+						data = JSON.parse(JSON.stringify(model.toJSON()));
+						delete data.url;
+						fs.writeFileSync(file, JSON.stringify(data))
+					}
+				})
 			}
 		}
 	;
