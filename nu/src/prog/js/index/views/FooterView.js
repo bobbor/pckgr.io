@@ -50,6 +50,9 @@
 						}
 						data = JSON.parse(data);
 						data.url = file.path;
+						data.features = data.features.map(function(feature) {
+							return feature.name;
+						});
 						F.inst.saveFile.create(data);
 					});
 				})

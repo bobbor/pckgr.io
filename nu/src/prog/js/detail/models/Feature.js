@@ -7,12 +7,12 @@
 		, $        = window.jQuery
 		, _        = window._
 		, Backbone = window.Backbone
+		, r        = require('path').resolve
 	;
 
 	F.defs.Feature = Backbone.Model.extend({
-		initialize: function() {
-
-		},
-		sync: function() {}
+		initialize: function(attr, opts) {
+			this.logic = require(r('prog/js/features/'+attr.id+'/init.js'));
+		}
 	});
 }(this));

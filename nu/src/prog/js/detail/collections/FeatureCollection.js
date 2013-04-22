@@ -11,8 +11,15 @@
 
 	F.defs.FeatureCollection = Backbone.Collection.extend({
 		model: F.defs.Feature,
-		sync: function() {
-
+		sync: function(method, model, opts) {
+			switch(method) {
+				case "read":
+					opts.success(F.inst.CoreModel.get('features'));
+					break;
+				case "update":
+					console.log('update collection');
+					break;
+			}
 		}
 	});
 }(this));

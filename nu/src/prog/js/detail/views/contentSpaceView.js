@@ -12,5 +12,8 @@
 	;
 
 	F.defs.ContentSpaceView = Backbone.View.extend({
+		render: function() {
+			//$('.content').stickHead();
+		}
 	});
 }(this))

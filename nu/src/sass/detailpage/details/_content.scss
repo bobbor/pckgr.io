@@ -113,8 +113,12 @@
 	}
 }
 .target { display: none; }
-.pckgr .pckgr { display: block; }
-.compass .compass { display: block; }
-.jekyll .jekyll { display: block; }
-.grunt .grunt { display: block; }
-.less .less { display: block; }
+.target.current { display: block; }
+
+#hint p {
+	text-transform: uppercase;
+	margin-top: 30px;
+	color: #aaa;
+	text-align: center;
+	font-size: 24px;
+}

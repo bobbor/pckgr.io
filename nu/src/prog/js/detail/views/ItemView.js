@@ -16,6 +16,7 @@
 			this.listenTo(this.model, 'destroy', this.remove);
 		},
 		render: function() {
+			this.$el.attr('data-target', this.model.get('id'));
 			this.$el.html(this.template(this.model.toJSON()));
 			return this;
 		}

@@ -27,6 +27,7 @@
 			return this;
 		},
 		clear: function() {
+			var id = this.model.id;
 			if(global.windows.detail[id]) {
 				global.windows.detail[id][0].close(true);
 			}

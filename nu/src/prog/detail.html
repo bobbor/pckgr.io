@@ -5,28 +5,13 @@
 		<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
 		<link rel="stylesheet" href="css/style.css" />
 	</head>
-	<body class="pckgr detail">
+	<body class="detail">
 		<div id="wrapper">
 			<section id="project-listing" class="column">
 				<div>
 					<header>
 					</header>
-					<section id="project-items"><div><ol>
-						<!--<li data-target="pckgr">
-							<div>
-								<h2>Packager</h2>
-								<span class="change">
-									<time datetime="2012-11-12">2mo ago</time>
-								</span>
-								<a class="delete"><i class="fugue-trash"></i> </a>
-							</div>
-						</li>-->
-						<li class="no-feature">
-							<div>
-								<h2>no Feature yet</h2>
-							</div>
-						</li>
-					</ol></div></section>
+					<section id="project-items"><div><ol></ol></div></section>
 					<footer class="toggle-actions">
 						<div>
 							<div class="actions btn-group">
@@ -43,16 +28,13 @@
 							<div class="edit-name pull-left">
 								<input class="editableinput" type="text" value="" />
 							</div>
-							<div id="feature_header_space" class="pull-right">
-								<!--<div class="pckgr target">
-									<div class="actions btn-group">
-										<button type="button" class="add_package btn btn-small expandable"><i class="fugue-plus"></i> Add a Package</button>
-									</div>
-								</div>-->
-							</div>
+							<div id="feature_header_space" class="pull-right"></div>
 						</div>
 					</header>
 					<div id="feature_content_space">
+						<section class="content" id="hint">
+							<p>No Feature used on this Project</p>
+						</section>
 						<!--<section class="pckgr content target">
 							<div>
 								<ol class="packages">
@@ -639,30 +621,8 @@
 					</div>
 					<footer>
 						<div>
-							<div id="feature_footer1_space" class="pull-left">
-								<!--<div class="pckgr target">
-									<div class="btn-group">
-										<button class="btn">Validieren</button>
-									</div>
-								</div>-->
-								<!--<div class="compass target">
-									<div class="btn-group">
-										<button class="btn">Compile</button>
-									</div>
-								</div>-->
-							</div>
-							<div id="feature_footer2_space" class="pull-right">
-								<!--<div class="pckgr target">
-									<div class="btn-group">
-										<button class="btn btn-primary">Packen</button>
-									</div>
-								</div>
-								<div class="compass target">
-									<div class="btn-group">
-										<button class="btn btn-success">Watch</button>
-									</div>
-								</div>-->
-							</div>
+							<div id="feature_footer1_space" class="pull-left"></div>
+							<div id="feature_footer2_space" class="pull-right"></div>
 						</div>
 					</footer>
 				</div>
@@ -675,6 +635,23 @@
 					<time datetime="2012-11-12">2mo ago</time>
 				</span>
 				<a class="delete"><i class="fugue-trash"></i> </a>
+			</div>
+		</script>
+		<script type="text/template" id="headerspace-template">
+			<div class="actions btn-group">
+				<button type="button" class="btn btn-small expandable <%= classes %>">
+					<i class="<%= icon %>"></i> <%= text %>
+				</button>
+			</div>
+		</script>
+		<script type="text/template" id="footerleftspace-template">
+			<div class="btn-group">
+				<button class="btn <%= classes %>"><%= text %></button>
+			</div>
+		</script>
+		<script type="text/template" id="footerrightspace-template">
+			<div class="btn-group">
+				<button class="btn <%= classes %>"><%= text %></button>
 			</div>
 		</script>
 		<script src="js/lib/jquery.js"></script>
@@ -692,6 +669,7 @@
 		<script src="js/data/fsBridge.js"></script>
 
 		<script src="js/detail/views/ItemView.js"></script>
+		<script src="js/detail/views/SpaceView.js"></script>
 		<script src="js/detail/models/Feature.js"></script>
 		<script src="js/detail/collections/FeatureCollection.js"></script>
 		<script src="js/detail/views/DetailsHeaderView.js"></script>

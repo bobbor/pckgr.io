@@ -15,6 +15,7 @@
 	$(function() {
 		var win = winref[F.queries.id][0];
 		F.basis = winref[F.queries.id][1];
+
 		fileref = new F.defs.FileBridge(F.basis.get('url'));
 
 		fileref.read(function(success, data) {
@@ -25,13 +26,15 @@
 			}
 			var data = JSON.parse(data);
 
-			F.basis.set('features', _.keys(data.features));
+			F.basis.set('features', data.features.map(function(feature) {
+				return feature.name
+			}));
 			F.basis.set('name', data.name);
 			win.title = data.name;
 			F.basis.save();
 
 			F.inst.CoreModel = new F.defs.CoreModel(data);
-			new F.defs.CoreView({
+			var core = new F.defs.CoreView({
 				model: F.inst.CoreModel
 			});
 
@@ -40,8 +43,12 @@
 				F.basis.save();
 				win.title = val;
 			});
+			F.inst.CoreModel.on('change:features', function(model, val, opts) {
+				F.basis.set('features', data.features.map(function(feature) {
+					return feature.name
+				}));
+				F.basis.save();
+			});
 		});
-
-		//$('.content').stickHead();
 	});
 }(this));

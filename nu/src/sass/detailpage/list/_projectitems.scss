@@ -17,17 +17,16 @@
 			padding: 10px 30px 10px 25px;
 			border-left: 5px solid $color;
 		}
-		.grunt &[data-target="grunt"] > div,
-		.pckgr &[data-target="pckgr"] > div,
-		.compass &[data-target="compass"] > div,
-		.less &[data-target="less"] > div,
-		.jekyll &[data-target="jekyll"] > div {
+		&.active > div {
 			border-left-color: $lightblue;
 			background-color: $base;
 		}
 		&:hover > div {
 			border-left-color: $base;
 			background-color: $base;
+		}
+		&:hover.active > div {
+			border-left-color: $lightblue;
 		}
 		&:hover .delete {
 			display: block;
