@@ -1,80 +1,70 @@
 (function(window, undefined) {
 	"use strict";
-	var F = window.Sluraff;
-	var LOG_VERBOSE = 0,
-		LOG_INFO = 1,
-		LOG_WARN = 2,
-		LOG_ERROR = 3,
-		LOG_NONE = 4;
-
-	var logNormal = function(){
-		if (window.console && window.console.log) {
-			if (console.log.apply) {
-				console.log.apply(console, arguments);
-			}
-			else {
-				var a = Array.prototype.slice.call(arguments);
-				console.log(_.reduce(a, function(p, v) { return p + v; }));
-			}
-		}
-	};
-	var logWarn = function(){
-		if (window.console && window.console.warn) {
-			if (console.warn.apply) {
-				console.warn.apply(console, arguments);
-			}
-			else {
-				var a = Array.prototype.slice.call(arguments);
-				console.warn(_.reduce(a, function(p, v) { return p + v; }));
-			}
-		}
-	};
-	var	logError = function() {
-		if (window.console && window.console.error) {
-			if (console.error.apply) {
-				console.error.apply(console, arguments);
-			} else {
-				var a = Array.prototype.slice.call(arguments);
-				console.error(_.reduce(a, function(p, v) { return p + v; }));
-			}
-		}
-	};
+	var oldlog = console.log;
+	var oldwarn = console.warn;
+	var olderror = console.error;
 
 	function getLineNumber() {
 		function getErrorObject(){
 			try { throw Error(''); } catch(err) { return err; }
 		}
-		var arr_remove = function(array, from, to) {
-			var rest = array.slice((to || from) + 1 || array.length);
-			array.length = from < 0 ? array.length + from : from;
-			return array.push.apply(array, rest);
-		};
 		var err = getErrorObject();
-		var call_stack = err.stack.split('\n');
-		arr_remove(call_stack, 0,4);
-		arr_remove(call_stack, 1, -1)
-		for(var i = call_stack.length;i--;) {
-			call_stack[i] = call_stack[i].slice((call_stack[i].indexOf("at ") || 0)+2, call_stack[i].length);
-		}
-		return call_stack.join('\n         ');
+		var stack = err.stack.split('\n');
+		stack = stack.slice(5,stack.length-1);
+		return ['\n  ', stack[0]];
 	}
 
-	F.log = function() {
-		logNormal.apply(null,
-			['%c   INFO :', 'color: #06e']
-				.concat(Array.prototype.slice.call(arguments))
-				.concat(['\n\n        ', getLineNumber()])
-		);
+	var bg_log = function(bg) {
+		bg = bg || '#fff';
+		return function(fg) {
+			fg = fg || '#000';
+			return function() {
+				oldlog.apply(console,
+					['%cLOG', 'color: '+fg+';background-color: '+bg, ' :']
+						.concat(Array.prototype.slice.call(arguments))
+						.concat(getLineNumber())
+					)
+				;
+			}
+		}
 	};
-	F.warn = function() {
-		logWarn.apply(null,
+
+	console.warn = function() {
+		oldwarn.apply(console,
 			['%c   WARN :', 'background-color: #ff0;color: #333']
 				.concat(Array.prototype.slice.call(arguments))
-				.concat(['\n\n        ', getLineNumber()])
-		);
+				.concat(getLineNumber())
+			)
+		;
 	};
-	F.error = function() {
-		logError.apply(null, ['%c  ERROR :', 'background-color: red;color:white'].concat(Array.prototype.slice.call(arguments)));
+
+	console.error = function() {
+		olderror.apply(console,
+			['%c  ERROR :', 'background-color: red;color:white']
+				.concat(Array.prototype.slice.call(arguments))
+			)
+		;
 	};
+
+
+
+
+
+
+
+	var simple = bg_log('#fff');
+	var bluebg = bg_log('#06f');
+	var redbg = bg_log('#d00');
+	var greenbg = bg_log('#0d0');
+	var yellowbg = bg_log('#ee0');
+	console.blue = simple('#06f');
+	console.red = simple('#d00');
+	console.green = simple('#0d0');
+	console.yellow = simple('#ee0');
+	console.ablue = bluebg('#000');
+	console.ared = redbg('#000');
+	console.agreen = greenbg('#000');
+	console.ayellow = yellowbg('#000');
+	console.log = console.blue;
 
 }(this, void 0));

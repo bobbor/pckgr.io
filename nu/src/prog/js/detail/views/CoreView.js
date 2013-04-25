@@ -59,6 +59,12 @@
 			});
 			$('#feature_footer2_space', this.el).append(footerRightView.render().el);
 
+			var contentView = new F.defs.ContentView({
+				model: model,
+				logic: 'content'
+			});
+			$('#feature_content_space', this.el).append(contentView.render().el);
+
 			// ContentView is entirely controlled by the feature
 		},
 		allFeatures: function() {

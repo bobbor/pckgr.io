@@ -12,5 +12,6 @@
 		"position": "center",
 		"resizable": true,
 		"frame": true
-	}
+	},
+	"chromium-args": "--enable-experimental-webkit-features"
 }
