@@ -24,7 +24,12 @@
 				if(this.logik.extraKlass) {
 					this.$el.addClass(this.logik.extraKlass);
 				}
-				this.$el.html(this.logik.render());
+				this.$el.html(this.logik.render(this.model.toJSON().config));
+				if(this.logik.plugs) {
+					for(var i = 0; i < this.logik.plugs.length; i++) {
+						this.$el[this.logik.plugs[i]]();
+					}
+				}
 			}
 			return this;
 		}
