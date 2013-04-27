@@ -5,7 +5,6 @@ var content      = require('./regions/content.js');
 
 module.exports = {
 	header       : header,
-	footer_left  : footer_left,
 	footer_right : footer_right,
 	content      : content
 };

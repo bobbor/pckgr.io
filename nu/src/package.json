@@ -13,5 +13,9 @@
 		"resizable": true,
 		"frame": true
 	},
-	"chromium-args": "--enable-experimental-webkit-features"
+	"chromium-args": "--enable-experimental-webkit-features",
+	"dependencies": {
+		"underscore": "1.4.4",
+		"swig": "0.13.5"
+	}
 }
