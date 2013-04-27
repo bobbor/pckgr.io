@@ -1,0 +1,105 @@
+#wrapper#wrapper#wrapper #project-items {
+	display: none;
+}
+.packages {
+	list-style: none;
+	margin: 0
+}
+
+.packages li:first-child caption {
+	border-top: 0px
+}
+
+caption {
+	text-align: left;
+	overflow: hidden;
+	padding: 0 20px;
+	background-color: #f3f3f3;
+	border-bottom: 1px solid #d9d9d9;
+	border-top: 1px solid #d9d9d9
+}
+
+caption h3 {
+	float: left;
+	margin: 0;
+	font-size: inherit;
+	line-height: inherit
+}
+
+caption input {
+	font-size: 14px;
+	font-weight: normal;
+	padding: 0 5px;
+	height: 30px;
+	margin: 4px 0
+}
+
+caption .actions {
+	margin: 7px 0
+}
+
+@media (max-width: 723px) {
+	caption .actions {
+		position: absolute;
+		right: 5px
+	}
+}
+
+caption.clone {
+	position: fixed;
+	top: 40px;
+	left: 230px;
+	right: 6px
+}
+
+.table {
+	margin-bottom: 0
+}
+
+thead {
+	display: none
+}
+
+td {
+	border-color: #d9d9d9;
+	background-color: #d9d9d9;
+	padding: 0;
+	cursor: pointer
+}
+
+td>div {
+	background-color: #fbfbfb;
+	padding: 10px 0 10px 50px;
+	height: 27px
+}
+
+td h5 {
+	margin: 0;
+	font-weight: normal;
+	line-height: 26px
+}
+
+td .title {
+	max-width: 170px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: inline-block;
+	white-space: nowrap;
+	font-size: 13px
+}
+
+td .actions {
+	margin-right: 10px
+}
+
+td .dropdown-menu {
+	font-size: 11.9px
+}
+
+td .dropdown-menu i {
+	margin-left: -18px
+}
+
+tr:first-child td {
+	border: 0px
+}

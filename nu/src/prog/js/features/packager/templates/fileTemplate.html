@@ -1,0 +1,16 @@
+{% for file in files %}
+<tr>
+	<td>
+		<div class="toggle-actions">
+			<h5 class="name pull-left">
+				<span class="title" title="{{ file }}">{{ file }}</span>
+			</h5>
+			<div class="actions btn-group pull-right">
+				<button class="btn dropdown-toggle btn-small expandable" data-toggle="dropdown">
+					<i class="fugue-trash"></i> delete
+				</button>
+			</div>
+		</div>
+	</td>
+</tr>
+{% endfor %}

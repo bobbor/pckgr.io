@@ -1,0 +1,30 @@
+{% for package in packageList %}
+<li>
+	<div>
+		<table class="table">
+			<caption class="toggle-actions">
+				<h3><input class="editableinput" type="text" value="{{ package.name }}"/></h3>
+				<div class="actions pull-right btn-group">
+					<button type="button" class="btn btn-small expandable">
+						<i class="fugue-plus"></i> Add a File
+					</button>
+					<button type="button" class="btn btn-small expandable">
+						<i class="fugue-plus"></i> Add a Module
+					</button>
+					<button type="button" class="btn btn-small btn-danger expandable">
+						<i class="fugue-trash"></i> Delete Package
+					</button>
+				</div>
+			</caption>
+			<thead>
+				<tr>
+					<td>Filename</td>
+				</tr>
+			</thead>
+			<tbody>
+				{% include "packager/templates/fileTemplate.html" with package %}
+			</tbody>
+		</table>
+	</div>
+</li>
+{% endfor %}
